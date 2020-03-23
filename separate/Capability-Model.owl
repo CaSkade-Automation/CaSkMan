@@ -1,0 +1,244 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.hsu-hh.de/ontologies/capability-model#"
+     xml:base="http://www.hsu-hh.de/ontologies/capability-model"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:OpcUa="http://www.hsu-ifa.de/ontologies/OpcUa#"
+     xmlns:swrla="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#">
+    <owl:Ontology rdf:about="http://www.hsu-hh.de/ontologies/capability-model#">
+        <owl:versionIRI rdf:resource="http://www.hsu-hh.de/ontologies/capability-model/1.0.0#"/>
+        <owl:imports rdf:resource="https://raw.githubusercontent.com/ConstantinHildebrandt/Industrial-Standard-Ontology-Design-Patterns/master/DIN%208580/DIN8580.owl"/>
+        <owl:imports rdf:resource="https://raw.githubusercontent.com/ConstantinHildebrandt/Industrial-Standard-Ontology-Design-Patterns/master/DIN%20EN%2061360/DINEN61360.owl"/>
+        <owl:imports rdf:resource="https://raw.githubusercontent.com/ConstantinHildebrandt/Industrial-Standard-Ontology-Design-Patterns/master/VDI%202206/VDI2206.owl"/>
+        <owl:imports rdf:resource="https://raw.githubusercontent.com/ConstantinHildebrandt/Industrial-Standard-Ontology-Design-Patterns/master/VDI%203682/VDI3682.owl"/>
+        <owl:imports rdf:resource="https://raw.githubusercontent.com/ConstantinHildebrandt/Industrial-Standard-Ontology-Design-Patterns/master/WADL/WADL.owl"/>
+        <owl:imports rdf:resource="https://raw.githubusercontent.com/ConstantinHildebrandt/Industrial-Standard-Ontology-Design-Patterns/master/OPC%20UA/OpcUa.owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.hsu-hh.de/ontologies/capability-model#hasCapability -->
+
+    <owl:ObjectProperty rdf:about="http://www.hsu-hh.de/ontologies/capability-model#hasCapability">
+        <owl:equivalentProperty rdf:resource="http://www.hsu-ifa.de/ontologies/VDI3682#TechnicalResourceIsAssignedToProcessOperator"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.hsu-hh.de/ontologies/capability-model#hasDataElement -->
+
+    <owl:ObjectProperty rdf:about="http://www.hsu-hh.de/ontologies/capability-model#hasDataElement">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:range rdf:resource="http://www.hsu-ifa.de/ontologies/DINEN61360#Data_Element"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.hsu-hh.de/ontologies/capability-model#isExecutableViaOpcUaSkill -->
+
+    <owl:ObjectProperty rdf:about="http://www.hsu-hh.de/ontologies/capability-model#isExecutableViaOpcUaSkill">
+        <rdfs:subPropertyOf rdf:resource="http://www.hsu-hh.de/ontologies/capability-model#isExecutableViaSkill"/>
+        <rdfs:range rdf:resource="http://www.hsu-hh.de/ontologies/capability-model#OpcUaSkill"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.hsu-hh.de/ontologies/capability-model#isExecutableViaRestSkill -->
+
+    <owl:ObjectProperty rdf:about="http://www.hsu-hh.de/ontologies/capability-model#isExecutableViaRestSkill">
+        <rdfs:subPropertyOf rdf:resource="http://www.hsu-hh.de/ontologies/capability-model#isExecutableViaSkill"/>
+        <rdfs:range rdf:resource="http://www.hsu-hh.de/ontologies/capability-model#RestSkill"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.hsu-hh.de/ontologies/capability-model#isExecutableViaSkill -->
+
+    <owl:ObjectProperty rdf:about="http://www.hsu-hh.de/ontologies/capability-model#isExecutableViaSkill">
+        <rdfs:domain rdf:resource="http://www.hsu-hh.de/ontologies/capability-model#Capability"/>
+        <rdfs:range rdf:resource="http://www.hsu-hh.de/ontologies/capability-model#Skill"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.hsu-hh.de/ontologies/capability-model#providesOpcUaSkill -->
+
+    <owl:ObjectProperty rdf:about="http://www.hsu-hh.de/ontologies/capability-model#providesOpcUaSkill">
+        <rdfs:subPropertyOf rdf:resource="http://www.hsu-hh.de/ontologies/capability-model#providesSkill"/>
+        <rdfs:range rdf:resource="http://www.hsu-hh.de/ontologies/capability-model#OpcUaSkill"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.hsu-hh.de/ontologies/capability-model#providesRestSkill -->
+
+    <owl:ObjectProperty rdf:about="http://www.hsu-hh.de/ontologies/capability-model#providesRestSkill">
+        <rdfs:subPropertyOf rdf:resource="http://www.hsu-hh.de/ontologies/capability-model#providesSkill"/>
+        <rdfs:range rdf:resource="http://www.hsu-hh.de/ontologies/capability-model#RestSkill"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.hsu-hh.de/ontologies/capability-model#providesSkill -->
+
+    <owl:ObjectProperty rdf:about="http://www.hsu-hh.de/ontologies/capability-model#providesSkill">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.hsu-ifa.de/ontologies/VDI3682#TechnicalResource"/>
+        <rdfs:range rdf:resource="http://www.hsu-hh.de/ontologies/capability-model#Skill"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.hsu-ifa.de/ontologies/VDI3682#TechnicalResourceIsAssignedToProcessOperator -->
+
+    <rdf:Description rdf:about="http://www.hsu-ifa.de/ontologies/VDI3682#TechnicalResourceIsAssignedToProcessOperator"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.hsu-hh.de/ontologies/capability-model#Capability -->
+
+    <owl:Class rdf:about="http://www.hsu-hh.de/ontologies/capability-model#Capability">
+        <owl:equivalentClass rdf:resource="http://www.hsu-ifa.de/ontologies/VDI3682#Process"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hsu-hh.de/ontologies/capability-model#OpcUaSkill -->
+
+    <owl:Class rdf:about="http://www.hsu-hh.de/ontologies/capability-model#OpcUaSkill">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.hsu-ifa.de/ontologies/OpcUa#UAMethod"/>
+                    <rdf:Description rdf:about="http://www.hsu-ifa.de/ontologies/OpcUa#UAVariable"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.hsu-hh.de/ontologies/capability-model#Skill"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hsu-hh.de/ontologies/capability-model#RestSkill -->
+
+    <owl:Class rdf:about="http://www.hsu-hh.de/ontologies/capability-model#RestSkill">
+        <owl:equivalentClass rdf:resource="http://www.hsu-ifa.de/ontologies/WADL#Method"/>
+        <rdfs:subClassOf rdf:resource="http://www.hsu-hh.de/ontologies/capability-model#Skill"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hsu-hh.de/ontologies/capability-model#Skill -->
+
+    <owl:Class rdf:about="http://www.hsu-hh.de/ontologies/capability-model#Skill"/>
+    
+
+
+    <!-- http://www.hsu-ifa.de/ontologies/DIN8580#Fertigungsverfahren -->
+
+    <rdf:Description rdf:about="http://www.hsu-ifa.de/ontologies/DIN8580#Fertigungsverfahren">
+        <rdfs:subClassOf rdf:resource="http://www.hsu-ifa.de/ontologies/VDI3682#Process"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.hsu-ifa.de/ontologies/VDI2206#Energy -->
+
+    <rdf:Description rdf:about="http://www.hsu-ifa.de/ontologies/VDI2206#Energy">
+        <owl:equivalentClass rdf:resource="http://www.hsu-ifa.de/ontologies/VDI3682#Energy"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.hsu-ifa.de/ontologies/VDI2206#Information -->
+
+    <rdf:Description rdf:about="http://www.hsu-ifa.de/ontologies/VDI2206#Information">
+        <owl:equivalentClass rdf:resource="http://www.hsu-ifa.de/ontologies/VDI3682#Information"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.hsu-ifa.de/ontologies/VDI2206#Module -->
+
+    <rdf:Description rdf:about="http://www.hsu-ifa.de/ontologies/VDI2206#Module">
+        <rdfs:subClassOf rdf:resource="http://www.hsu-ifa.de/ontologies/VDI3682#TechnicalResource"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.hsu-ifa.de/ontologies/VDI2206#Product -->
+
+    <rdf:Description rdf:about="http://www.hsu-ifa.de/ontologies/VDI2206#Product">
+        <owl:equivalentClass rdf:resource="http://www.hsu-ifa.de/ontologies/VDI3682#Product"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.hsu-ifa.de/ontologies/VDI2206#System -->
+
+    <rdf:Description rdf:about="http://www.hsu-ifa.de/ontologies/VDI2206#System">
+        <rdfs:subClassOf rdf:resource="http://www.hsu-ifa.de/ontologies/VDI3682#TechnicalResource"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.hsu-ifa.de/ontologies/VDI3682#Energy -->
+
+    <rdf:Description rdf:about="http://www.hsu-ifa.de/ontologies/VDI3682#Energy"/>
+    
+
+
+    <!-- http://www.hsu-ifa.de/ontologies/VDI3682#Information -->
+
+    <rdf:Description rdf:about="http://www.hsu-ifa.de/ontologies/VDI3682#Information"/>
+    
+
+
+    <!-- http://www.hsu-ifa.de/ontologies/VDI3682#Process -->
+
+    <rdf:Description rdf:about="http://www.hsu-ifa.de/ontologies/VDI3682#Process"/>
+    
+
+
+    <!-- http://www.hsu-ifa.de/ontologies/VDI3682#Product -->
+
+    <rdf:Description rdf:about="http://www.hsu-ifa.de/ontologies/VDI3682#Product"/>
+    
+
+
+    <!-- http://www.hsu-ifa.de/ontologies/WADL#Method -->
+
+    <rdf:Description rdf:about="http://www.hsu-ifa.de/ontologies/WADL#Method"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.6.2018-09-06T00:27:41Z) https://github.com/owlcs/owlapi -->
+
