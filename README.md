@@ -14,7 +14,7 @@ All these ODPs are separately maintained in our [Industry Standard ODP-Repositor
 
 This capability ontology can be seen as an alignment ontology that connects these standard ODPs. Figure 1 gives an overview on how these ODPs were connected to get a model that can be used to describe machines and their capabilities as well as executable skills:
 
-![](https://github.com/aljoshakoecher/machine-capability-model/blob/documentation/images/images/AlignmentOntology.png?raw=true)
-
+![Capability Ontology as an alignment ontology of different standards](https://github.com/aljoshakoecher/machine-capability-model/blob/documentation/images/images/AlignmentOntology.png?raw=true)
+**Figure 1:** Alignment Ontology that combines various industry standards.
 
 Further documentation as well as examples coming soon...
