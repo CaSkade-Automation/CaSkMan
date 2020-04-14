@@ -5,6 +5,7 @@
     <uri id="Imports Wizard Entry" name="http://www.hsu-ifa.de/ontologies/DINEN61360" uri="file:/C:/Daten/git_repos/Industrial%20Standard%20ODPs/DIN%20EN%2061360/DINEN61360.owl"/>
     <uri id="Imports Wizard Entry" name="http://www.hsu-ifa.de/ontologies/DIN8580" uri="file:/C:/Daten/git_repos/Industrial%20Standard%20ODPs/DIN%208580/DIN8580.owl"/>
     <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
-        <uri id="Automatically generated entry, Timestamp=1583158905856" name="http://www.hsu-hh.de/ontologies/capability-model" uri="Capability-Model.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1586866740332" name="duplicate:http://www.hsu-hh.de/ontologies/capability-model" uri="Capability-Model.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1586866740332" name="duplicate:http://www.hsu-hh.de/ontologies/capability-model" uri="Capability-Model_merged.owl"/>
     </group>
 </catalog>
