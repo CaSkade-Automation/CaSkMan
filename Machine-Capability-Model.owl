@@ -105,9 +105,20 @@
     
 
 
+    <!-- http://www.hsu-ifa.de/ontologies/capability-model#hasSkillOutput -->
+
+    <owl:ObjectProperty rdf:about="http://www.hsu-ifa.de/ontologies/capability-model#hasSkillOutput">
+        <rdfs:subPropertyOf rdf:resource="http://www.hsu-ifa.de/ontologies/capability-model#hasSkillVariable"/>
+        <rdfs:domain rdf:resource="http://www.hsu-ifa.de/ontologies/capability-model#Skill"/>
+        <rdfs:range rdf:resource="http://www.hsu-ifa.de/ontologies/capability-model#SkillOutput"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://www.hsu-ifa.de/ontologies/capability-model#hasSkillParameter -->
 
     <owl:ObjectProperty rdf:about="http://www.hsu-ifa.de/ontologies/capability-model#hasSkillParameter">
+        <rdfs:subPropertyOf rdf:resource="http://www.hsu-ifa.de/ontologies/capability-model#hasSkillVariable"/>
         <rdfs:domain rdf:resource="http://www.hsu-ifa.de/ontologies/capability-model#Skill"/>
         <rdfs:range rdf:resource="http://www.hsu-ifa.de/ontologies/capability-model#SkillParameter"/>
     </owl:ObjectProperty>
@@ -120,6 +131,15 @@
         <rdfs:domain rdf:resource="http://www.hsu-ifa.de/ontologies/capability-model#SkillParameter"/>
         <rdfs:range rdf:resource="http://www.hsu-ifa.de/ontologies/capability-model#SkillParameterOption"/>
         <rdfs:comment></rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.hsu-ifa.de/ontologies/capability-model#hasSkillVariable -->
+
+    <owl:ObjectProperty rdf:about="http://www.hsu-ifa.de/ontologies/capability-model#hasSkillVariable">
+        <rdfs:domain rdf:resource="http://www.hsu-ifa.de/ontologies/capability-model#Skill"/>
+        <rdfs:range rdf:resource="http://www.hsu-ifa.de/ontologies/capability-model#SkillVariable"/>
     </owl:ObjectProperty>
     
 
@@ -274,7 +294,7 @@
     <!-- http://www.hsu-ifa.de/ontologies/WADL#hasParameterName -->
 
     <rdf:Description rdf:about="http://www.hsu-ifa.de/ontologies/WADL#hasParameterName">
-        <rdfs:subPropertyOf rdf:resource="http://www.hsu-ifa.de/ontologies/capability-model#hasParameterName"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.hsu-ifa.de/ontologies/capability-model#hasVariableName"/>
     </rdf:Description>
     
 
@@ -290,7 +310,7 @@
     <!-- http://www.hsu-ifa.de/ontologies/WADL#hasParameterType -->
 
     <rdf:Description rdf:about="http://www.hsu-ifa.de/ontologies/WADL#hasParameterType">
-        <rdfs:subPropertyOf rdf:resource="http://www.hsu-ifa.de/ontologies/capability-model#hasParameterType"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.hsu-ifa.de/ontologies/capability-model#hasVariableType"/>
     </rdf:Description>
     
 
@@ -311,21 +331,21 @@
     
 
 
-    <!-- http://www.hsu-ifa.de/ontologies/capability-model#hasParameterName -->
+    <!-- http://www.hsu-ifa.de/ontologies/capability-model#hasVariableName -->
 
-    <owl:DatatypeProperty rdf:about="http://www.hsu-ifa.de/ontologies/capability-model#hasParameterName">
+    <owl:DatatypeProperty rdf:about="http://www.hsu-ifa.de/ontologies/capability-model#hasVariableName">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="http://www.hsu-ifa.de/ontologies/capability-model#SkillParameter"/>
+        <rdfs:domain rdf:resource="http://www.hsu-ifa.de/ontologies/capability-model#SkillVariable"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#NMTOKEN"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://www.hsu-ifa.de/ontologies/capability-model#hasParameterType -->
+    <!-- http://www.hsu-ifa.de/ontologies/capability-model#hasVariableType -->
 
-    <owl:DatatypeProperty rdf:about="http://www.hsu-ifa.de/ontologies/capability-model#hasParameterType">
+    <owl:DatatypeProperty rdf:about="http://www.hsu-ifa.de/ontologies/capability-model#hasVariableType">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="http://www.hsu-ifa.de/ontologies/capability-model#SkillParameter"/>
+        <rdfs:domain rdf:resource="http://www.hsu-ifa.de/ontologies/capability-model#SkillVariable"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
@@ -335,7 +355,7 @@
 
     <owl:DatatypeProperty rdf:about="http://www.hsu-ifa.de/ontologies/capability-model#isRequired">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="http://www.hsu-ifa.de/ontologies/capability-model#SkillParameter"/>
+        <rdfs:domain rdf:resource="http://www.hsu-ifa.de/ontologies/capability-model#SkillVariable"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Defines whether or not a SkillParameter is required</rdfs:comment>
     </owl:DatatypeProperty>
@@ -561,9 +581,19 @@
     
 
 
+    <!-- http://www.hsu-ifa.de/ontologies/capability-model#SkillOutput -->
+
+    <owl:Class rdf:about="http://www.hsu-ifa.de/ontologies/capability-model#SkillOutput">
+        <rdfs:subClassOf rdf:resource="http://www.hsu-ifa.de/ontologies/capability-model#SkillVariable"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.hsu-ifa.de/ontologies/capability-model#SkillParameter -->
 
-    <owl:Class rdf:about="http://www.hsu-ifa.de/ontologies/capability-model#SkillParameter"/>
+    <owl:Class rdf:about="http://www.hsu-ifa.de/ontologies/capability-model#SkillParameter">
+        <rdfs:subClassOf rdf:resource="http://www.hsu-ifa.de/ontologies/capability-model#SkillVariable"/>
+    </owl:Class>
     
 
 
@@ -574,6 +604,12 @@
 This class was created to be compliant with WADL where an Option individual has multiple data properties attached. 
 In the future, there could also be multiple DataProperties for a SkillParameterOption</rdfs:comment>
     </owl:Class>
+    
+
+
+    <!-- http://www.hsu-ifa.de/ontologies/capability-model#SkillVariable -->
+
+    <owl:Class rdf:about="http://www.hsu-ifa.de/ontologies/capability-model#SkillVariable"/>
     
 
 
