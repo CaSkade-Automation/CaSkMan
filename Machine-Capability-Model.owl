@@ -11,15 +11,15 @@
      xmlns:DINEN61360="http://www.hsu-ifa.de/ontologies/DINEN61360#"
      xmlns:capability-model="http://www.hsu-ifa.de/ontologies/capability-model#">
     <owl:Ontology rdf:about="http://www.hsu-ifa.de/ontologies/capability-model#">
-        <owl:versionIRI rdf:resource="http://www.hsu-ifa.de/ontologies/capability-model/2.0.0#"/>
-        <owl:imports rdf:resource="https://raw.githubusercontent.com/hsu-aut/Industrial-Standard-Ontology-Design-Patterns/v1.4.0/DIN%208580/DIN8580.owl"/>
-        <owl:imports rdf:resource="https://raw.githubusercontent.com/hsu-aut/Industrial-Standard-Ontology-Design-Patterns/v1.4.0/DIN%20EN%2061360/DINEN61360.owl"/>
-        <owl:imports rdf:resource="https://raw.githubusercontent.com/hsu-aut/Industrial-Standard-Ontology-Design-Patterns/v1.4.0/ISA%2088/ISA88.owl"/>
-        <owl:imports rdf:resource="https://raw.githubusercontent.com/hsu-aut/Industrial-Standard-Ontology-Design-Patterns/v1.4.0/OPC%20UA/OpcUa.owl"/>
-        <owl:imports rdf:resource="https://raw.githubusercontent.com/hsu-aut/Industrial-Standard-Ontology-Design-Patterns/v1.4.0/VDI%202206/VDI2206.owl"/>
-        <owl:imports rdf:resource="https://raw.githubusercontent.com/hsu-aut/Industrial-Standard-Ontology-Design-Patterns/v1.4.0/VDI%202860/VDI2860.owl"/>
-        <owl:imports rdf:resource="https://raw.githubusercontent.com/hsu-aut/Industrial-Standard-Ontology-Design-Patterns/v1.4.0/VDI%203682/VDI3682.owl"/>
-        <owl:imports rdf:resource="https://raw.githubusercontent.com/hsu-aut/Industrial-Standard-Ontology-Design-Patterns/v1.4.0/WADL/WADL.owl"/>
+        <owl:versionIRI rdf:resource="http://www.hsu-ifa.de/ontologies/capability-model/2.0.1#"/>
+        <owl:imports rdf:resource="https://raw.githubusercontent.com/hsu-aut/Industrial-Standard-Ontology-Design-Patterns/v1.4.2/DIN%208580/DIN8580.owl"/>
+        <owl:imports rdf:resource="https://raw.githubusercontent.com/hsu-aut/Industrial-Standard-Ontology-Design-Patterns/v1.4.2/DIN%20EN%2061360/DINEN61360.owl"/>
+        <owl:imports rdf:resource="https://raw.githubusercontent.com/hsu-aut/Industrial-Standard-Ontology-Design-Patterns/v1.4.2/ISA%2088/ISA88.owl"/>
+        <owl:imports rdf:resource="https://raw.githubusercontent.com/hsu-aut/Industrial-Standard-Ontology-Design-Patterns/v1.4.2/OPC%20UA/OpcUa.owl"/>
+        <owl:imports rdf:resource="https://raw.githubusercontent.com/hsu-aut/Industrial-Standard-Ontology-Design-Patterns/v1.4.2/VDI%202206/VDI2206.owl"/>
+        <owl:imports rdf:resource="https://raw.githubusercontent.com/hsu-aut/Industrial-Standard-Ontology-Design-Patterns/v1.4.2/VDI%202860/VDI2860.owl"/>
+        <owl:imports rdf:resource="https://raw.githubusercontent.com/hsu-aut/Industrial-Standard-Ontology-Design-Patterns/v1.4.2/VDI%203682/VDI3682.owl"/>
+        <owl:imports rdf:resource="https://raw.githubusercontent.com/hsu-aut/Industrial-Standard-Ontology-Design-Patterns/v1.4.2/WADL/WADL.owl"/>
     </owl:Ontology>
     
 
