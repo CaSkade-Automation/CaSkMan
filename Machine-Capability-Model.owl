@@ -533,14 +533,6 @@
     
 
 
-    <!-- http://www.hsu-ifa.de/ontologies/OpcUa#UAObject -->
-
-    <rdf:Description rdf:about="http://www.hsu-ifa.de/ontologies/OpcUa#UAObject">
-        <owl:equivalentClass rdf:resource="http://www.hsu-ifa.de/ontologies/capability-model#OpcUaSkill"/>
-    </rdf:Description>
-    
-
-
     <!-- http://www.hsu-ifa.de/ontologies/VDI2206#Energy -->
 
     <rdf:Description rdf:about="http://www.hsu-ifa.de/ontologies/VDI2206#Energy">
@@ -627,14 +619,6 @@
 
     <rdf:Description rdf:about="http://www.hsu-ifa.de/ontologies/WADL#Parameter">
         <rdfs:subClassOf rdf:resource="http://www.hsu-ifa.de/ontologies/capability-model#SkillParameter"/>
-    </rdf:Description>
-    
-
-
-    <!-- http://www.hsu-ifa.de/ontologies/WADL#Resources -->
-
-    <rdf:Description rdf:about="http://www.hsu-ifa.de/ontologies/WADL#Resources">
-        <owl:equivalentClass rdf:resource="http://www.hsu-ifa.de/ontologies/capability-model#RestSkill"/>
     </rdf:Description>
     
 
