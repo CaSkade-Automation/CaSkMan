@@ -786,6 +786,14 @@ Every capability that is executable via a skill is considered a provided one.</r
     
 
 
+    <!-- http://www.hsu-ifa.de/ontologies/capability-model#SetParameters -->
+
+    <owl:Class rdf:about="http://www.hsu-ifa.de/ontologies/capability-model#SetParameters">
+        <rdfs:subClassOf rdf:resource="http://www.hsu-ifa.de/ontologies/capability-model#StatelessMethod"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.hsu-ifa.de/ontologies/capability-model#Skill -->
 
     <owl:Class rdf:about="http://www.hsu-ifa.de/ontologies/capability-model#Skill"/>
