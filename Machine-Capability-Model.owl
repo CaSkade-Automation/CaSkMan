@@ -533,14 +533,6 @@
     
 
 
-    <!-- http://www.hsu-ifa.de/ontologies/OpcUa#UAObject -->
-
-    <rdf:Description rdf:about="http://www.hsu-ifa.de/ontologies/OpcUa#UAObject">
-        <owl:equivalentClass rdf:resource="http://www.hsu-ifa.de/ontologies/capability-model#OpcUaSkill"/>
-    </rdf:Description>
-    
-
-
     <!-- http://www.hsu-ifa.de/ontologies/VDI2206#Energy -->
 
     <rdf:Description rdf:about="http://www.hsu-ifa.de/ontologies/VDI2206#Energy">
@@ -627,14 +619,6 @@
 
     <rdf:Description rdf:about="http://www.hsu-ifa.de/ontologies/WADL#Parameter">
         <rdfs:subClassOf rdf:resource="http://www.hsu-ifa.de/ontologies/capability-model#SkillParameter"/>
-    </rdf:Description>
-    
-
-
-    <!-- http://www.hsu-ifa.de/ontologies/WADL#Resources -->
-
-    <rdf:Description rdf:about="http://www.hsu-ifa.de/ontologies/WADL#Resources">
-        <owl:equivalentClass rdf:resource="http://www.hsu-ifa.de/ontologies/capability-model#RestSkill"/>
     </rdf:Description>
     
 
@@ -757,6 +741,35 @@
     
 
 
+    <!-- http://www.hsu-ifa.de/ontologies/capability-model#ProvidedCapability -->
+
+    <owl:Class rdf:about="http://www.hsu-ifa.de/ontologies/capability-model#ProvidedCapability">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.hsu-ifa.de/ontologies/capability-model#Capability"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.hsu-ifa.de/ontologies/capability-model#isExecutableViaSkill"/>
+                        <owl:someValuesFrom rdf:resource="http://www.hsu-ifa.de/ontologies/capability-model#Skill"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.hsu-ifa.de/ontologies/capability-model#Capability"/>
+        <rdfs:comment>Provided capabilities are capabilities that are provided by machines and that can be used for matching of required capabilities.
+Every capability that is executable via a skill is considered a provided one.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hsu-ifa.de/ontologies/capability-model#RequiredCapability -->
+
+    <owl:Class rdf:about="http://www.hsu-ifa.de/ontologies/capability-model#RequiredCapability">
+        <rdfs:subClassOf rdf:resource="http://www.hsu-ifa.de/ontologies/capability-model#Capability"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.hsu-ifa.de/ontologies/capability-model#Reset -->
 
     <owl:Class rdf:about="http://www.hsu-ifa.de/ontologies/capability-model#Reset">
@@ -769,6 +782,14 @@
 
     <owl:Class rdf:about="http://www.hsu-ifa.de/ontologies/capability-model#RestSkill">
         <rdfs:subClassOf rdf:resource="http://www.hsu-ifa.de/ontologies/capability-model#Skill"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hsu-ifa.de/ontologies/capability-model#SetParameters -->
+
+    <owl:Class rdf:about="http://www.hsu-ifa.de/ontologies/capability-model#SetParameters">
+        <rdfs:subClassOf rdf:resource="http://www.hsu-ifa.de/ontologies/capability-model#StatelessMethod"/>
     </owl:Class>
     
 
@@ -1255,6 +1276,309 @@ In the future, there could also be multiple DataProperties for a SkillParameterO
     
 
 
+    <!-- http://www.hsu-ifa.de/ontologies/capability-model#PLC2Skill_Command_Abort -->
+
+    <owl:NamedIndividual rdf:about="http://www.hsu-ifa.de/ontologies/capability-model#PLC2Skill_Command_Abort">
+        <DINEN61360:Instance_Description_has_Type rdf:resource="http://www.hsu-ifa.de/ontologies/capability-model#SkillCommandVariable_TD"/>
+        <DINEN61360:Expression_Goal>Requirement</DINEN61360:Expression_Goal>
+        <DINEN61360:Logic_Interpretation>=</DINEN61360:Logic_Interpretation>
+        <DINEN61360:Value rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</DINEN61360:Value>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.hsu-ifa.de/ontologies/capability-model#PLC2Skill_Command_Clear -->
+
+    <owl:NamedIndividual rdf:about="http://www.hsu-ifa.de/ontologies/capability-model#PLC2Skill_Command_Clear">
+        <DINEN61360:Instance_Description_has_Type rdf:resource="http://www.hsu-ifa.de/ontologies/capability-model#SkillCommandVariable_TD"/>
+        <DINEN61360:Expression_Goal>Requirement</DINEN61360:Expression_Goal>
+        <DINEN61360:Logic_Interpretation>=</DINEN61360:Logic_Interpretation>
+        <DINEN61360:Value rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</DINEN61360:Value>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.hsu-ifa.de/ontologies/capability-model#PLC2Skill_Command_Hold -->
+
+    <owl:NamedIndividual rdf:about="http://www.hsu-ifa.de/ontologies/capability-model#PLC2Skill_Command_Hold">
+        <DINEN61360:Instance_Description_has_Type rdf:resource="http://www.hsu-ifa.de/ontologies/capability-model#SkillCommandVariable_TD"/>
+        <DINEN61360:Expression_Goal>Requirement</DINEN61360:Expression_Goal>
+        <DINEN61360:Logic_Interpretation>=</DINEN61360:Logic_Interpretation>
+        <DINEN61360:Value rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</DINEN61360:Value>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.hsu-ifa.de/ontologies/capability-model#PLC2Skill_Command_Reset -->
+
+    <owl:NamedIndividual rdf:about="http://www.hsu-ifa.de/ontologies/capability-model#PLC2Skill_Command_Reset">
+        <DINEN61360:Instance_Description_has_Type rdf:resource="http://www.hsu-ifa.de/ontologies/capability-model#SkillCommandVariable_TD"/>
+        <DINEN61360:Expression_Goal>Requirement</DINEN61360:Expression_Goal>
+        <DINEN61360:Logic_Interpretation>=</DINEN61360:Logic_Interpretation>
+        <DINEN61360:Value rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</DINEN61360:Value>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.hsu-ifa.de/ontologies/capability-model#PLC2Skill_Command_Start -->
+
+    <owl:NamedIndividual rdf:about="http://www.hsu-ifa.de/ontologies/capability-model#PLC2Skill_Command_Start">
+        <DINEN61360:Instance_Description_has_Type rdf:resource="http://www.hsu-ifa.de/ontologies/capability-model#SkillCommandVariable_TD"/>
+        <DINEN61360:Expression_Goal>Requirement</DINEN61360:Expression_Goal>
+        <DINEN61360:Logic_Interpretation>=</DINEN61360:Logic_Interpretation>
+        <DINEN61360:Value rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</DINEN61360:Value>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.hsu-ifa.de/ontologies/capability-model#PLC2Skill_Command_Stop -->
+
+    <owl:NamedIndividual rdf:about="http://www.hsu-ifa.de/ontologies/capability-model#PLC2Skill_Command_Stop">
+        <DINEN61360:Instance_Description_has_Type rdf:resource="http://www.hsu-ifa.de/ontologies/capability-model#SkillCommandVariable_TD"/>
+        <DINEN61360:Expression_Goal>Requirement</DINEN61360:Expression_Goal>
+        <DINEN61360:Logic_Interpretation>=</DINEN61360:Logic_Interpretation>
+        <DINEN61360:Value rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</DINEN61360:Value>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.hsu-ifa.de/ontologies/capability-model#PLC2Skill_Command_Suspend -->
+
+    <owl:NamedIndividual rdf:about="http://www.hsu-ifa.de/ontologies/capability-model#PLC2Skill_Command_Suspend">
+        <DINEN61360:Instance_Description_has_Type rdf:resource="http://www.hsu-ifa.de/ontologies/capability-model#SkillCommandVariable_TD"/>
+        <DINEN61360:Expression_Goal>Requirement</DINEN61360:Expression_Goal>
+        <DINEN61360:Logic_Interpretation>=</DINEN61360:Logic_Interpretation>
+        <DINEN61360:Value rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</DINEN61360:Value>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.hsu-ifa.de/ontologies/capability-model#PLC2Skill_Command_Unhold -->
+
+    <owl:NamedIndividual rdf:about="http://www.hsu-ifa.de/ontologies/capability-model#PLC2Skill_Command_Unhold">
+        <DINEN61360:Instance_Description_has_Type rdf:resource="http://www.hsu-ifa.de/ontologies/capability-model#SkillCommandVariable_TD"/>
+        <DINEN61360:Expression_Goal>Requirement</DINEN61360:Expression_Goal>
+        <DINEN61360:Logic_Interpretation>=</DINEN61360:Logic_Interpretation>
+        <DINEN61360:Value rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</DINEN61360:Value>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.hsu-ifa.de/ontologies/capability-model#PLC2Skill_Command_Unsuspend -->
+
+    <owl:NamedIndividual rdf:about="http://www.hsu-ifa.de/ontologies/capability-model#PLC2Skill_Command_Unsuspend">
+        <DINEN61360:Instance_Description_has_Type rdf:resource="http://www.hsu-ifa.de/ontologies/capability-model#SkillCommandVariable_TD"/>
+        <DINEN61360:Expression_Goal>Requirement</DINEN61360:Expression_Goal>
+        <DINEN61360:Logic_Interpretation>=</DINEN61360:Logic_Interpretation>
+        <DINEN61360:Value rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</DINEN61360:Value>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.hsu-ifa.de/ontologies/capability-model#PLC2Skill_CurrentState_Aborted -->
+
+    <owl:NamedIndividual rdf:about="http://www.hsu-ifa.de/ontologies/capability-model#PLC2Skill_CurrentState_Aborted">
+        <rdf:type rdf:resource="http://www.hsu-ifa.de/ontologies/DINEN61360#Instance_Description"/>
+        <DINEN61360:Instance_Description_has_Type rdf:resource="http://www.hsu-ifa.de/ontologies/capability-model#CurrentStateOutput_TD"/>
+        <DINEN61360:Expression_Goal>Assurance</DINEN61360:Expression_Goal>
+        <DINEN61360:Logic_Interpretation>=</DINEN61360:Logic_Interpretation>
+        <DINEN61360:Value rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">16</DINEN61360:Value>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.hsu-ifa.de/ontologies/capability-model#PLC2Skill_CurrentState_Aborting -->
+
+    <owl:NamedIndividual rdf:about="http://www.hsu-ifa.de/ontologies/capability-model#PLC2Skill_CurrentState_Aborting">
+        <rdf:type rdf:resource="http://www.hsu-ifa.de/ontologies/DINEN61360#Instance_Description"/>
+        <DINEN61360:Instance_Description_has_Type rdf:resource="http://www.hsu-ifa.de/ontologies/capability-model#CurrentStateOutput_TD"/>
+        <DINEN61360:Expression_Goal>Assurance</DINEN61360:Expression_Goal>
+        <DINEN61360:Logic_Interpretation>=</DINEN61360:Logic_Interpretation>
+        <DINEN61360:Value rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</DINEN61360:Value>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.hsu-ifa.de/ontologies/capability-model#PLC2Skill_CurrentState_Clearing -->
+
+    <owl:NamedIndividual rdf:about="http://www.hsu-ifa.de/ontologies/capability-model#PLC2Skill_CurrentState_Clearing">
+        <rdf:type rdf:resource="http://www.hsu-ifa.de/ontologies/DINEN61360#Instance_Description"/>
+        <DINEN61360:Instance_Description_has_Type rdf:resource="http://www.hsu-ifa.de/ontologies/capability-model#CurrentStateOutput_TD"/>
+        <DINEN61360:Expression_Goal>Assurance</DINEN61360:Expression_Goal>
+        <DINEN61360:Logic_Interpretation>=</DINEN61360:Logic_Interpretation>
+        <DINEN61360:Value rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">17</DINEN61360:Value>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.hsu-ifa.de/ontologies/capability-model#PLC2Skill_CurrentState_Complete -->
+
+    <owl:NamedIndividual rdf:about="http://www.hsu-ifa.de/ontologies/capability-model#PLC2Skill_CurrentState_Complete">
+        <rdf:type rdf:resource="http://www.hsu-ifa.de/ontologies/DINEN61360#Instance_Description"/>
+        <DINEN61360:Instance_Description_has_Type rdf:resource="http://www.hsu-ifa.de/ontologies/capability-model#CurrentStateOutput_TD"/>
+        <DINEN61360:Expression_Goal>Assurance</DINEN61360:Expression_Goal>
+        <DINEN61360:Logic_Interpretation>=</DINEN61360:Logic_Interpretation>
+        <DINEN61360:Value rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</DINEN61360:Value>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.hsu-ifa.de/ontologies/capability-model#PLC2Skill_CurrentState_Completing -->
+
+    <owl:NamedIndividual rdf:about="http://www.hsu-ifa.de/ontologies/capability-model#PLC2Skill_CurrentState_Completing">
+        <rdf:type rdf:resource="http://www.hsu-ifa.de/ontologies/DINEN61360#Instance_Description"/>
+        <DINEN61360:Instance_Description_has_Type rdf:resource="http://www.hsu-ifa.de/ontologies/capability-model#CurrentStateOutput_TD"/>
+        <DINEN61360:Expression_Goal>Assurance</DINEN61360:Expression_Goal>
+        <DINEN61360:Logic_Interpretation>=</DINEN61360:Logic_Interpretation>
+        <DINEN61360:Value rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</DINEN61360:Value>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.hsu-ifa.de/ontologies/capability-model#PLC2Skill_CurrentState_Execute -->
+
+    <owl:NamedIndividual rdf:about="http://www.hsu-ifa.de/ontologies/capability-model#PLC2Skill_CurrentState_Execute">
+        <rdf:type rdf:resource="http://www.hsu-ifa.de/ontologies/DINEN61360#Instance_Description"/>
+        <DINEN61360:Instance_Description_has_Type rdf:resource="http://www.hsu-ifa.de/ontologies/capability-model#CurrentStateOutput_TD"/>
+        <DINEN61360:Expression_Goal>Assurance</DINEN61360:Expression_Goal>
+        <DINEN61360:Logic_Interpretation>=</DINEN61360:Logic_Interpretation>
+        <DINEN61360:Value rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</DINEN61360:Value>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.hsu-ifa.de/ontologies/capability-model#PLC2Skill_CurrentState_Held -->
+
+    <owl:NamedIndividual rdf:about="http://www.hsu-ifa.de/ontologies/capability-model#PLC2Skill_CurrentState_Held">
+        <rdf:type rdf:resource="http://www.hsu-ifa.de/ontologies/DINEN61360#Instance_Description"/>
+        <DINEN61360:Instance_Description_has_Type rdf:resource="http://www.hsu-ifa.de/ontologies/capability-model#CurrentStateOutput_TD"/>
+        <DINEN61360:Expression_Goal>Assurance</DINEN61360:Expression_Goal>
+        <DINEN61360:Logic_Interpretation>=</DINEN61360:Logic_Interpretation>
+        <DINEN61360:Value rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</DINEN61360:Value>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.hsu-ifa.de/ontologies/capability-model#PLC2Skill_CurrentState_Holding -->
+
+    <owl:NamedIndividual rdf:about="http://www.hsu-ifa.de/ontologies/capability-model#PLC2Skill_CurrentState_Holding">
+        <rdf:type rdf:resource="http://www.hsu-ifa.de/ontologies/DINEN61360#Instance_Description"/>
+        <DINEN61360:Instance_Description_has_Type rdf:resource="http://www.hsu-ifa.de/ontologies/capability-model#CurrentStateOutput_TD"/>
+        <DINEN61360:Expression_Goal>Assurance</DINEN61360:Expression_Goal>
+        <DINEN61360:Logic_Interpretation>=</DINEN61360:Logic_Interpretation>
+        <DINEN61360:Value rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</DINEN61360:Value>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.hsu-ifa.de/ontologies/capability-model#PLC2Skill_CurrentState_Idle -->
+
+    <owl:NamedIndividual rdf:about="http://www.hsu-ifa.de/ontologies/capability-model#PLC2Skill_CurrentState_Idle">
+        <rdf:type rdf:resource="http://www.hsu-ifa.de/ontologies/DINEN61360#Instance_Description"/>
+        <DINEN61360:Instance_Description_has_Type rdf:resource="http://www.hsu-ifa.de/ontologies/capability-model#CurrentStateOutput_TD"/>
+        <DINEN61360:Expression_Goal>Assurance</DINEN61360:Expression_Goal>
+        <DINEN61360:Logic_Interpretation>=</DINEN61360:Logic_Interpretation>
+        <DINEN61360:Value rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</DINEN61360:Value>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.hsu-ifa.de/ontologies/capability-model#PLC2Skill_CurrentState_Resetting -->
+
+    <owl:NamedIndividual rdf:about="http://www.hsu-ifa.de/ontologies/capability-model#PLC2Skill_CurrentState_Resetting">
+        <rdf:type rdf:resource="http://www.hsu-ifa.de/ontologies/DINEN61360#Instance_Description"/>
+        <DINEN61360:Instance_Description_has_Type rdf:resource="http://www.hsu-ifa.de/ontologies/capability-model#CurrentStateOutput_TD"/>
+        <DINEN61360:Expression_Goal>Assurance</DINEN61360:Expression_Goal>
+        <DINEN61360:Logic_Interpretation>=</DINEN61360:Logic_Interpretation>
+        <DINEN61360:Value rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</DINEN61360:Value>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.hsu-ifa.de/ontologies/capability-model#PLC2Skill_CurrentState_Starting -->
+
+    <owl:NamedIndividual rdf:about="http://www.hsu-ifa.de/ontologies/capability-model#PLC2Skill_CurrentState_Starting">
+        <rdf:type rdf:resource="http://www.hsu-ifa.de/ontologies/DINEN61360#Instance_Description"/>
+        <DINEN61360:Instance_Description_has_Type rdf:resource="http://www.hsu-ifa.de/ontologies/capability-model#CurrentStateOutput_TD"/>
+        <DINEN61360:Expression_Goal>Assurance</DINEN61360:Expression_Goal>
+        <DINEN61360:Logic_Interpretation>=</DINEN61360:Logic_Interpretation>
+        <DINEN61360:Value rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</DINEN61360:Value>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.hsu-ifa.de/ontologies/capability-model#PLC2Skill_CurrentState_Stopped -->
+
+    <owl:NamedIndividual rdf:about="http://www.hsu-ifa.de/ontologies/capability-model#PLC2Skill_CurrentState_Stopped">
+        <rdf:type rdf:resource="http://www.hsu-ifa.de/ontologies/DINEN61360#Instance_Description"/>
+        <DINEN61360:Instance_Description_has_Type rdf:resource="http://www.hsu-ifa.de/ontologies/capability-model#CurrentStateOutput_TD"/>
+        <DINEN61360:Expression_Goal>Assurance</DINEN61360:Expression_Goal>
+        <DINEN61360:Logic_Interpretation>=</DINEN61360:Logic_Interpretation>
+        <DINEN61360:Value rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</DINEN61360:Value>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.hsu-ifa.de/ontologies/capability-model#PLC2Skill_CurrentState_Stopping -->
+
+    <owl:NamedIndividual rdf:about="http://www.hsu-ifa.de/ontologies/capability-model#PLC2Skill_CurrentState_Stopping">
+        <rdf:type rdf:resource="http://www.hsu-ifa.de/ontologies/DINEN61360#Instance_Description"/>
+        <DINEN61360:Instance_Description_has_Type rdf:resource="http://www.hsu-ifa.de/ontologies/capability-model#CurrentStateOutput_TD"/>
+        <DINEN61360:Expression_Goal>Assurance</DINEN61360:Expression_Goal>
+        <DINEN61360:Logic_Interpretation>=</DINEN61360:Logic_Interpretation>
+        <DINEN61360:Value rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</DINEN61360:Value>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.hsu-ifa.de/ontologies/capability-model#PLC2Skill_CurrentState_Suspended -->
+
+    <owl:NamedIndividual rdf:about="http://www.hsu-ifa.de/ontologies/capability-model#PLC2Skill_CurrentState_Suspended">
+        <rdf:type rdf:resource="http://www.hsu-ifa.de/ontologies/DINEN61360#Instance_Description"/>
+        <DINEN61360:Instance_Description_has_Type rdf:resource="http://www.hsu-ifa.de/ontologies/capability-model#CurrentStateOutput_TD"/>
+        <DINEN61360:Expression_Goal>Assurance</DINEN61360:Expression_Goal>
+        <DINEN61360:Logic_Interpretation>=</DINEN61360:Logic_Interpretation>
+        <DINEN61360:Value rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</DINEN61360:Value>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.hsu-ifa.de/ontologies/capability-model#PLC2Skill_CurrentState_Suspending -->
+
+    <owl:NamedIndividual rdf:about="http://www.hsu-ifa.de/ontologies/capability-model#PLC2Skill_CurrentState_Suspending">
+        <rdf:type rdf:resource="http://www.hsu-ifa.de/ontologies/DINEN61360#Instance_Description"/>
+        <DINEN61360:Instance_Description_has_Type rdf:resource="http://www.hsu-ifa.de/ontologies/capability-model#CurrentStateOutput_TD"/>
+        <DINEN61360:Expression_Goal>Assurance</DINEN61360:Expression_Goal>
+        <DINEN61360:Logic_Interpretation>=</DINEN61360:Logic_Interpretation>
+        <DINEN61360:Value rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</DINEN61360:Value>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.hsu-ifa.de/ontologies/capability-model#PLC2Skill_CurrentState_Unholding -->
+
+    <owl:NamedIndividual rdf:about="http://www.hsu-ifa.de/ontologies/capability-model#PLC2Skill_CurrentState_Unholding">
+        <rdf:type rdf:resource="http://www.hsu-ifa.de/ontologies/DINEN61360#Instance_Description"/>
+        <DINEN61360:Instance_Description_has_Type rdf:resource="http://www.hsu-ifa.de/ontologies/capability-model#CurrentStateOutput_TD"/>
+        <DINEN61360:Expression_Goal>Assurance</DINEN61360:Expression_Goal>
+        <DINEN61360:Logic_Interpretation>=</DINEN61360:Logic_Interpretation>
+        <DINEN61360:Value rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</DINEN61360:Value>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.hsu-ifa.de/ontologies/capability-model#PLC2Skill_CurrentState_Unsuspending -->
+
+    <owl:NamedIndividual rdf:about="http://www.hsu-ifa.de/ontologies/capability-model#PLC2Skill_CurrentState_Unsuspending">
+        <rdf:type rdf:resource="http://www.hsu-ifa.de/ontologies/DINEN61360#Instance_Description"/>
+        <DINEN61360:Instance_Description_has_Type rdf:resource="http://www.hsu-ifa.de/ontologies/capability-model#CurrentStateOutput_TD"/>
+        <DINEN61360:Expression_Goal>Assurance</DINEN61360:Expression_Goal>
+        <DINEN61360:Logic_Interpretation>=</DINEN61360:Logic_Interpretation>
+        <DINEN61360:Value rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</DINEN61360:Value>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.hsu-ifa.de/ontologies/capability-model#SkillCommandVariable_TD -->
 
     <owl:NamedIndividual rdf:about="http://www.hsu-ifa.de/ontologies/capability-model#SkillCommandVariable_TD">
@@ -1316,5 +1640,5 @@ In the future, there could also be multiple DataProperties for a SkillParameterO
 
 
 
-<!-- Generated by the OWL API (version 4.5.6.2018-09-06T00:27:41Z) https://github.com/owlcs/owlapi -->
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
 
