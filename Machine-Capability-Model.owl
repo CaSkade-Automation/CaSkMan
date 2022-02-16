@@ -19,7 +19,7 @@
         <owl:imports rdf:resource="https://raw.githubusercontent.com/hsu-aut/Industrial-Standard-Ontology-Design-Patterns/v1.4.2/VDI%202206/VDI2206.owl"/>
         <owl:imports rdf:resource="https://raw.githubusercontent.com/hsu-aut/Industrial-Standard-Ontology-Design-Patterns/v1.4.2/VDI%202860/VDI2860.owl"/>
         <owl:imports rdf:resource="https://raw.githubusercontent.com/hsu-aut/Industrial-Standard-Ontology-Design-Patterns/v1.4.2/WADL/WADL.owl"/>
-        <owl:imports rdf:resource="https://raw.githubusercontent.com/hsu-aut/IndustrialStandard-ODP-VDI3682/v2.0.0/VDI3682.owl"/>
+        <owl:imports rdf:resource="https://raw.githubusercontent.com/hsu-aut/IndustrialStandard-ODP-VDI3682/v2.0.1/VDI3682.owl"/>
     </owl:Ontology>
     
 
