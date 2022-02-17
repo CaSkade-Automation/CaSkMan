@@ -509,7 +509,7 @@
     <!-- http://www.hsu-ifa.de/ontologies/DIN8580#Fertigungsverfahren -->
 
     <rdf:Description rdf:about="http://www.hsu-ifa.de/ontologies/DIN8580#Fertigungsverfahren">
-        <rdfs:subClassOf rdf:resource="http://www.hsu-ifa.de/ontologies/VDI3682#Process"/>
+        <rdfs:subClassOf rdf:resource="http://www.hsu-ifa.de/ontologies/VDI3682#ProcessOperator"/>
     </rdf:Description>
     
 
@@ -593,7 +593,7 @@
     <!-- http://www.hsu-ifa.de/ontologies/VDI2860#Handhaben -->
 
     <rdf:Description rdf:about="http://www.hsu-ifa.de/ontologies/VDI2860#Handhaben">
-        <rdfs:subClassOf rdf:resource="http://www.hsu-ifa.de/ontologies/VDI3682#Process"/>
+        <rdfs:subClassOf rdf:resource="http://www.hsu-ifa.de/ontologies/VDI3682#ProcessOperator"/>
     </rdf:Description>
     
 
