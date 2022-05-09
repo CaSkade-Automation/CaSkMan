@@ -1,29 +1,39 @@
 # Semantic Machine Capability and Skill Model
 
+<p align="center">
+  <img src="https://github.com/aljoshakoecher/machine-capability-model/blob/documentation/images/images/Capability-ODPs.png?raw=true" alt="Overview of the ontology design patterns used" width="500"/>
+</p>
+<p align="center">
+  <b>Figure 1:</b> Overview of the ODPs used in this capability and skill model.
+</p>
 
-## Intro
-This repository contains an ontology that can be used to create a semantic description of machines, their capabilities and their executable skills. This ontology combines a variety of different so-called ontology design patterns (ODPs) that are all based on industry standards. The OPDs / standards included in this model are:
+## Overview
+This repository contains an ontology that can be used to create a semantic description of machines, their capabilities and their executable skills. This ontology combines a variety of different so-called ontology design patterns (ODPs) that are all based on industry standards. As shown in Figure 2, the OPDs / standards included in this model are:
 * **VDI 3682**: Defines a simple way to model processes with their in- and outputs
 * **VDI 2860**: Contains a (German) taxonomy of manufacturing processes
 * **DIN 8580**: Contains a (German) taxonomy of handling processes
 * **VDI 2206**: Defines basic terms to describe machines and the way they consist of modules and components and have interfaces with other machines. 
-* **DIN EN 61360**: Can be used to model attributes in a highly formal way
+* **DIN EN 61360**: Can be used to model attributes in a formal way
 * **ISA 88**: Defines a state machine which is widely used in automation (e.g. for packaging machines)
 * **Web Application Description Language**: A lightweight XML-based W3C submission to describe RESTful web services. We created an ontology for this XML schema.
 * **OPC UA**: Platform independent technologoy to describe and communicate data and methods. Used for data access and method calls and the de-facto standard for a modern communication architecture in automation
 
-All these ODPs are separately maintained in our [Industry Standard ODP-Repository](https://github.com/hsu-aut/Industrial-Standard-Ontology-Design-Patterns). You can find more detailed information about every single ODP in that repository.
+All these ODPs are maintained in separate Github repositories. You can find an archived overview with links to all ODP repos at [Industry Standard ODP-Repository](https://github.com/hsu-aut/Industrial-Standard-Ontology-Design-Patterns). Documentation to every ODP is provided in its corresponding repository.
 
-This ontology can be seen as an alignment ontology that connects those standard ODPs. Figure 1 gives an overview on how these ODPs were connected to get a model that can be used to describe machines, their capabilities and executable skills:
+## Alignment Ontology
+This machine capability and skill ontology can be seen as an alignment ontology that connects the aforementioned standard ODPs. Figure 2 gives an overview on how these ODPs were connected to get a model that can be used to describe machines, their capabilities and executable skills:
 
 ![Capability Ontology as an alignment ontology of different standards](https://github.com/aljoshakoecher/machine-capability-model/blob/documentation/images/images/AlignmentOntology.png?raw=true)
-**Figure 1:** Alignment Ontology that combines various industry standards.
+<p align="center">
+  <b>Figure 2:</b> Alignment Ontology that combines various industry standards.
+</p>
 
 ## Documentation
-The ontology consists of three main parts:
+The ontology consists of four main parts:
 * Machine structure: Defines a machine and its components as well as interfaces to other machines
 * Abstract capabilities: Processes that a machine is able to execute, modelled with their in- and output products.
 * Executable skills: A description of a technical implementation that can be used to execute a capability. Currently, we support RESTful web services and OPC UA.
+* Properties: A meta-model that allows to define properties and express statements over properties.
 
 These three parts are explained in the following sections.
 
@@ -42,6 +52,9 @@ If you can't use *SkillUp* or you don't want to, have a look at [LiOn](https://g
 
 If you really want to model a skill complete by hand and from scratch, you need to create an individual of one of the two classes `Cap:RestSkill` or `Cap:OpcUaSkill`. This individual has to be connected with the capbility it belongs to via `Cap:isExecutableVia`. You then have to model individuals for all states and transitions of an ISA88 state machine. Furthermore, depending on the technology used in your implementation, you have to model REST resources or OPC UA methods and connect them with the corresponding transitions. 
 Please have a look at the examples for more info.
+
+### Properties
+Coming soon...
 
 ## Examples
 Examples are coming soon...
