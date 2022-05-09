@@ -18,8 +18,8 @@
         <owl:imports rdf:resource="https://raw.githubusercontent.com/hsu-aut/IndustrialStandard-ODP-OPC-UA/v1.4.2/OpcUa.owl"/>
         <owl:imports rdf:resource="https://raw.githubusercontent.com/hsu-aut/IndustrialStandard-ODP-VDI2206/v1.4.2/VDI2206.owl"/>
         <owl:imports rdf:resource="https://raw.githubusercontent.com/hsu-aut/IndustrialStandard-ODP-VDI2860/v1.4.3/VDI2860.owl"/>
-        <owl:imports rdf:resource="https://raw.githubusercontent.com/hsu-aut/IndustrialStandard-ODP-WADL/v1.4.2/WADL.owl"/>
         <owl:imports rdf:resource="https://raw.githubusercontent.com/hsu-aut/IndustrialStandard-ODP-VDI3682/v3.0.1/VDI3682.owl"/>
+        <owl:imports rdf:resource="https://raw.githubusercontent.com/hsu-aut/IndustrialStandard-ODP-WADL/v1.4.2/WADL.owl"/>
     </owl:Ontology>
     
 
@@ -41,6 +41,14 @@
     
 
 
+    <!-- http://www.hsu-ifa.de/ontologies/VDI3682#isAssignedTo -->
+
+    <rdf:Description rdf:about="http://www.hsu-ifa.de/ontologies/VDI3682#isAssignedTo">
+        <owl:equivalentProperty rdf:resource="http://www.hsu-ifa.de/ontologies/capability-model#hasCapability"/>
+    </rdf:Description>
+    
+
+
     <!-- http://www.hsu-ifa.de/ontologies/WADL#hasParameterOption -->
 
     <rdf:Description rdf:about="http://www.hsu-ifa.de/ontologies/WADL#hasParameterOption">
@@ -51,7 +59,10 @@
 
     <!-- http://www.hsu-ifa.de/ontologies/capability-model#hasCapability -->
 
-    <owl:ObjectProperty rdf:about="http://www.hsu-ifa.de/ontologies/capability-model#hasCapability"/>
+    <owl:ObjectProperty rdf:about="http://www.hsu-ifa.de/ontologies/capability-model#hasCapability">
+        <rdfs:domain rdf:resource="http://www.hsu-ifa.de/ontologies/VDI3682#TechnicalResource"/>
+        <rdfs:range rdf:resource="http://www.hsu-ifa.de/ontologies/capability-model#Capability"/>
+    </owl:ObjectProperty>
     
 
 
@@ -761,18 +772,13 @@
     <!-- http://www.hsu-ifa.de/ontologies/capability-model#ProvidedCapability -->
 
     <owl:Class rdf:about="http://www.hsu-ifa.de/ontologies/capability-model#ProvidedCapability">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.hsu-ifa.de/ontologies/capability-model#Capability"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://www.hsu-ifa.de/ontologies/capability-model#isExecutableViaSkill"/>
-                        <owl:someValuesFrom rdf:resource="http://www.hsu-ifa.de/ontologies/capability-model#Skill"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://www.hsu-ifa.de/ontologies/capability-model#Capability"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.hsu-ifa.de/ontologies/capability-model#isExecutableViaSkill"/>
+                <owl:someValuesFrom rdf:resource="http://www.hsu-ifa.de/ontologies/capability-model#Skill"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment>Provided capabilities are capabilities that are provided by machines and that can be used for matching of required capabilities.
 Every capability that is executable via a skill is considered a provided one.</rdfs:comment>
     </owl:Class>
