@@ -12,14 +12,14 @@
      xmlns:capability-model="http://www.hsu-ifa.de/ontologies/capability-model#">
     <owl:Ontology rdf:about="http://www.hsu-ifa.de/ontologies/capability-model#">
         <owl:versionIRI rdf:resource="http://www.hsu-ifa.de/ontologies/capability-model/3.0.0#"/>
-        <owl:imports rdf:resource="https://raw.githubusercontent.com/hsu-aut/Industrial-Standard-Ontology-Design-Patterns/v1.4.2/DIN%208580/DIN8580.owl"/>
-        <owl:imports rdf:resource="https://raw.githubusercontent.com/hsu-aut/Industrial-Standard-Ontology-Design-Patterns/v1.4.2/DIN%20EN%2061360/DINEN61360.owl"/>
-        <owl:imports rdf:resource="https://raw.githubusercontent.com/hsu-aut/Industrial-Standard-Ontology-Design-Patterns/v1.4.2/ISA%2088/ISA88.owl"/>
-        <owl:imports rdf:resource="https://raw.githubusercontent.com/hsu-aut/Industrial-Standard-Ontology-Design-Patterns/v1.4.2/OPC%20UA/OpcUa.owl"/>
-        <owl:imports rdf:resource="https://raw.githubusercontent.com/hsu-aut/Industrial-Standard-Ontology-Design-Patterns/v1.4.2/VDI%202206/VDI2206.owl"/>
-        <owl:imports rdf:resource="https://raw.githubusercontent.com/hsu-aut/Industrial-Standard-Ontology-Design-Patterns/v1.4.2/VDI%202860/VDI2860.owl"/>
-        <owl:imports rdf:resource="https://raw.githubusercontent.com/hsu-aut/Industrial-Standard-Ontology-Design-Patterns/v1.4.2/WADL/WADL.owl"/>
-        <owl:imports rdf:resource="https://raw.githubusercontent.com/hsu-aut/IndustrialStandard-ODP-VDI3682/v2.0.1/VDI3682.owl"/>
+        <owl:imports rdf:resource="https://raw.githubusercontent.com/hsu-aut/IndustrialStandard-ODP-DIN8580/v1.4.2/DIN8580.owl"/>
+        <owl:imports rdf:resource="https://raw.githubusercontent.com/hsu-aut/IndustrialStandard-ODP-DINEN61360/v1.4.2/DINEN61360.owl"/>
+        <owl:imports rdf:resource="https://raw.githubusercontent.com/hsu-aut/IndustrialStandard-ODP-ISA88/v1.4.2/ISA88.owl"/>
+        <owl:imports rdf:resource="https://raw.githubusercontent.com/hsu-aut/IndustrialStandard-ODP-OPC-UA/v1.4.2/OpcUa.owl"/>
+        <owl:imports rdf:resource="https://raw.githubusercontent.com/hsu-aut/IndustrialStandard-ODP-VDI2206/v1.4.2/VDI2206.owl"/>
+        <owl:imports rdf:resource="https://raw.githubusercontent.com/hsu-aut/IndustrialStandard-ODP-VDI2860/v1.4.3/VDI2860.owl"/>
+        <owl:imports rdf:resource="https://raw.githubusercontent.com/hsu-aut/IndustrialStandard-ODP-WADL/v1.4.2/WADL.owl"/>
+        <owl:imports rdf:resource="https://raw.githubusercontent.com/hsu-aut/IndustrialStandard-ODP-VDI3682/v3.0.1/VDI3682.owl"/>
     </owl:Ontology>
     
 
