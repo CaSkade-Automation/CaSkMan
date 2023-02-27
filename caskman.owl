@@ -14,7 +14,7 @@
         <owl:imports rdf:resource="https://raw.githubusercontent.com/hsu-aut/IndustrialStandard-ODP-OPC-UA/v1.4.2/OpcUa.owl"/>
         <owl:imports rdf:resource="https://raw.githubusercontent.com/hsu-aut/IndustrialStandard-ODP-VDI2860/v1.4.3/VDI2860.owl"/>
         <owl:imports rdf:resource="https://raw.githubusercontent.com/hsu-aut/IndustrialStandard-ODP-WADL/v1.4.2/WADL.owl"/>
-        <owl:imports rdf:resource="https://raw.githubusercontent.com/hsu-aut/cask/v2.0.0/cask.owl"/>
+        <owl:imports rdf:resource="https://raw.githubusercontent.com/hsu-aut/cask/v2.1.0/cask.owl"/>
     </owl:Ontology>
     
 
