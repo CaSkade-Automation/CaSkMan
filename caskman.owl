@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="http://www.hsu-hh.de/ontologies/capability-model#"
-     xml:base="http://www.hsu-hh.de/ontologies/capability-model"
+<rdf:RDF xmlns="http://www.w3id.org/hsu-aut/caskman#"
+     xml:base="http://www.w3id.org/hsu-aut/caskman"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
@@ -9,7 +9,7 @@
      xmlns:OpcUa="http://www.hsu-ifa.de/ontologies/OpcUa#"
      xmlns:swrla="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#">
     <owl:Ontology rdf:about="http://www.w3id.org/hsu-aut/caskman#">
-        <owl:versionIRI rdf:resource="http://www.w3id.org/hsu-aut/caskman/4.0.0#"/>
+        <owl:versionIRI rdf:resource="http://www.w3id.org/hsu-aut/caskman/4.0.1#"/>
         <owl:imports rdf:resource="https://raw.githubusercontent.com/hsu-aut/IndustrialStandard-ODP-DIN8580/v1.4.2/DIN8580.owl"/>
         <owl:imports rdf:resource="https://raw.githubusercontent.com/hsu-aut/IndustrialStandard-ODP-OPC-UA/v1.4.2/OpcUa.owl"/>
         <owl:imports rdf:resource="https://raw.githubusercontent.com/hsu-aut/IndustrialStandard-ODP-VDI2860/v1.4.3/VDI2860.owl"/>
