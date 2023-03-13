@@ -40,6 +40,26 @@
     
 
 
+    <!-- http://www.w3id.org/hsu-aut/caskman#accessibleThroughOpcUaMethodInterface -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3id.org/hsu-aut/caskman#accessibleThroughOpcUaMethodInterface">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3id.org/hsu-aut/caskman#accessibleThroughOpcUaInterface"/>
+        <rdfs:domain rdf:resource="http://www.w3id.org/hsu-aut/css#Skill"/>
+        <rdfs:range rdf:resource="http://www.w3id.org/hsu-aut/caskman#OpcUaMethodSkillInterface"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3id.org/hsu-aut/caskman#accessibleThroughOpcUaVariableInterface -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3id.org/hsu-aut/caskman#accessibleThroughOpcUaVariableInterface">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3id.org/hsu-aut/caskman#accessibleThroughOpcUaInterface"/>
+        <rdfs:domain rdf:resource="http://www.w3id.org/hsu-aut/css#Skill"/>
+        <rdfs:range rdf:resource="http://www.w3id.org/hsu-aut/caskman#OpcUaVariableSkillInterface"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://www.w3id.org/hsu-aut/caskman#accessibleThroughRestInterface -->
 
     <owl:ObjectProperty rdf:about="http://www.w3id.org/hsu-aut/caskman#accessibleThroughRestInterface">
@@ -185,10 +205,26 @@
     
 
 
+    <!-- http://www.w3id.org/hsu-aut/caskman#OpcUaMethodSkillInterface -->
+
+    <owl:Class rdf:about="http://www.w3id.org/hsu-aut/caskman#OpcUaMethodSkillInterface">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/hsu-aut/caskman#OpcUaSkillInterface"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.w3id.org/hsu-aut/caskman#OpcUaSkillInterface -->
 
     <owl:Class rdf:about="http://www.w3id.org/hsu-aut/caskman#OpcUaSkillInterface">
         <rdfs:subClassOf rdf:resource="http://www.w3id.org/hsu-aut/css#SkillInterface"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/hsu-aut/caskman#OpcUaVariableSkillInterface -->
+
+    <owl:Class rdf:about="http://www.w3id.org/hsu-aut/caskman#OpcUaVariableSkillInterface">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/hsu-aut/caskman#OpcUaSkillInterface"/>
     </owl:Class>
     
 
