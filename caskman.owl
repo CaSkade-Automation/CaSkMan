@@ -14,7 +14,7 @@
         <owl:imports rdf:resource="https://raw.githubusercontent.com/hsu-aut/IndustrialStandard-ODP-OPC-UA/v1.4.2/OpcUa.owl"/>
         <owl:imports rdf:resource="https://raw.githubusercontent.com/hsu-aut/IndustrialStandard-ODP-VDI2860/v1.4.3/VDI2860.owl"/>
         <owl:imports rdf:resource="https://raw.githubusercontent.com/hsu-aut/IndustrialStandard-ODP-WADL/v1.4.2/WADL.owl"/>
-        <owl:imports rdf:resource="https://raw.githubusercontent.com/hsu-aut/cask/v2.1.0/cask.owl"/>
+        <owl:imports rdf:resource="https://raw.githubusercontent.com/hsu-aut/cask/v2.2.0/cask.owl"/>
     </owl:Ontology>
     
 
@@ -107,14 +107,6 @@
     
 
 
-    <!-- http://www.hsu-ifa.de/ontologies/OpcUa#UAObject -->
-
-    <rdf:Description rdf:about="http://www.hsu-ifa.de/ontologies/OpcUa#UAObject">
-        <owl:equivalentClass rdf:resource="http://www.w3id.org/hsu-aut/caskman#OpcUaSkillInterface"/>
-    </rdf:Description>
-    
-
-
     <!-- http://www.hsu-ifa.de/ontologies/VDI2206#Energy -->
 
     <rdf:Description rdf:about="http://www.hsu-ifa.de/ontologies/VDI2206#Energy">
@@ -178,14 +170,6 @@
     <!-- http://www.hsu-ifa.de/ontologies/VDI3682#Product -->
 
     <rdf:Description rdf:about="http://www.hsu-ifa.de/ontologies/VDI3682#Product"/>
-    
-
-
-    <!-- http://www.hsu-ifa.de/ontologies/WADL#Method -->
-
-    <rdf:Description rdf:about="http://www.hsu-ifa.de/ontologies/WADL#Method">
-        <owl:equivalentClass rdf:resource="http://www.w3id.org/hsu-aut/caskman#RestSkillInterface"/>
-    </rdf:Description>
     
 
 
