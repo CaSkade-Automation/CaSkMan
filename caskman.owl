@@ -9,7 +9,7 @@
      xmlns:OpcUa="http://www.hsu-ifa.de/ontologies/OpcUa#"
      xmlns:swrla="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#">
     <owl:Ontology rdf:about="http://www.w3id.org/hsu-aut/caskman#">
-        <owl:versionIRI rdf:resource="http://www.w3id.org/hsu-aut/caskman/4.1.0#"/>
+        <owl:versionIRI rdf:resource="http://www.w3id.org/hsu-aut/caskman/4.2.0#"/>
         <owl:imports rdf:resource="https://raw.githubusercontent.com/hsu-aut/IndustrialStandard-ODP-DIN8580/v1.4.2/DIN8580.owl"/>
         <owl:imports rdf:resource="https://raw.githubusercontent.com/hsu-aut/IndustrialStandard-ODP-OPC-UA/v1.4.2/OpcUa.owl"/>
         <owl:imports rdf:resource="https://raw.githubusercontent.com/hsu-aut/IndustrialStandard-ODP-VDI2860/v1.4.3/VDI2860.owl"/>
