@@ -1,0 +1,237 @@
+@prefix CSS: <http://www.w3id.org/hsu-aut/css#> .
+@prefix CaSk: <http://www.w3id.org/hsu-aut/cask#> .
+@prefix CaSkMan: <http://www.w3id.org/hsu-aut/caskman#> .
+@prefix DIN8580: <http://www.hsu-ifa.de/ontologies/DIN8580#> .
+@prefix VDI3682: <http://www.hsu-ifa.de/ontologies/VDI3682#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix VDI2206: <http://www.hsu-ifa.de/ontologies/VDI2206#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix OpcUa: <http://www.hsu-ifa.de/ontologies/OpcUa#> .
+@prefix DINEN61360: <http://www.hsu-ifa.de/ontologies/DINEN61360#> .
+@prefix OPS: <http://www.hsu-ifa.de/ontologies/OPS-KnowledgeBase#> .
+@prefix WADL: <http://www.hsu-ifa.de/ontologies/WADL#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix stateMachine: <http://www.hsu-ifa.de/ontologies/ISA-TR88#> .
+
+<https://hsu-hh.de/modules#ExampleModule_OPC_UA_Server> a OpcUa:UAServer,
+						owl:NamedIndividual;
+					OpcUa:hasNodeSet <https://hsu-hh.de/modules#ExampleModule_OPC_UA_Server_NodeSet>.
+<https://hsu-hh.de/modules#ExampleModule_OPC_UA_Server_NodeSet> a OpcUa:UANodeSet, 
+									owl:NamedIndividual. 
+<https://hsu-hh.de/modules#ExampleModule_OPC_UA_Server> OpcUa:hasEndpointUrl "opc.tcp://192.168.178.29:4841/hsu";
+					OpcUa:hasMessageSecurityMode OpcUa:MessageSecurityMode_None; 
+					OpcUa:hasSecurityPolicy OpcUa:SecurityPolicy_None .<https://hsu-hh.de/modules#ExampleModule_OPC_UA_Server> OpcUa:requiresUserName "user";
+					OpcUa:requiresPassword "password1" .<https://hsu-hh.de/modules#ExampleModule_OPC_UA_Server> OpcUa:hasEndpointUrl "opc.tcp://192.168.178.29:4841/hsu";
+					OpcUa:hasMessageSecurityMode OpcUa:MessageSecurityMode_SignAndEncrypt; 
+					OpcUa:hasSecurityPolicy OpcUa:SecurityPolicy_Basic256Sha256 .<https://hsu-hh.de/modules#ExampleModule_OPC_UA_Server> OpcUa:hasEndpointUrl "opc.tcp://172.20.96.1:4841/hsu";
+					OpcUa:hasMessageSecurityMode OpcUa:MessageSecurityMode_None; 
+					OpcUa:hasSecurityPolicy OpcUa:SecurityPolicy_None .<https://hsu-hh.de/modules#ExampleModule_OPC_UA_Server> OpcUa:requiresUserName "user";
+					OpcUa:requiresPassword "password1" .<https://hsu-hh.de/modules#ExampleModule_OPC_UA_Server> OpcUa:hasEndpointUrl "opc.tcp://172.20.96.1:4841/hsu";
+					OpcUa:hasMessageSecurityMode OpcUa:MessageSecurityMode_SignAndEncrypt; 
+					OpcUa:hasSecurityPolicy OpcUa:SecurityPolicy_Basic256Sha256 .<https://hsu-hh.de/modules#ExampleModule_OPC_UA_Server> OpcUa:hasEndpointUrl "opc.tcp://172.19.48.1:4841/hsu";
+					OpcUa:hasMessageSecurityMode OpcUa:MessageSecurityMode_None; 
+					OpcUa:hasSecurityPolicy OpcUa:SecurityPolicy_None .<https://hsu-hh.de/modules#ExampleModule_OPC_UA_Server> OpcUa:requiresUserName "user";
+					OpcUa:requiresPassword "password1" .<https://hsu-hh.de/modules#ExampleModule_OPC_UA_Server> OpcUa:hasEndpointUrl "opc.tcp://172.19.48.1:4841/hsu";
+					OpcUa:hasMessageSecurityMode OpcUa:MessageSecurityMode_SignAndEncrypt; 
+					OpcUa:hasSecurityPolicy OpcUa:SecurityPolicy_Basic256Sha256 .<https://hsu-hh.de/modules#ExampleModule> CSS:providesSkill <https://hsu-hh.de/skills/examples#OpcUaAdditionSkill> .
+<https://hsu-hh.de/skills/examples#OpcUaAdditionSkill> a CaSkMan:JavaSkill, owl:NamedIndividual;
+						CaSkMan:accessibleThroughOpcUaInterface <https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_UaInterface>;
+						CSS:behaviorConformsTo <https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_StateMachine>;
+						CaSk:hasCurrentState <https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_StateMachine_Idle>.
+<https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_UaInterface> a CaSkMan:OpcUaMethodSkillInterface.<https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_UaInterface> OpcUa:browseName "https://hsu-hh.de/skills/examples#OpcUaAdditionSkill";  
+						OpcUa:browseNamespace 2;
+						OpcUa:nodeId "ns=2;s=Skills/https://hsu-hh.de/skills/examples#OpcUaAdditionSkill";
+						OpcUa:nodeNamespace 2;
+						OpcUa:displayName "" ;
+						CSS:exposes <https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_StateMachine>.
+<https://hsu-hh.de/modules#ExampleModule_OPC_UA_Server_NodeSet> OpcUa:containsNode <https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_UaInterface> .<https://hsu-hh.de/capabilities/examples#AdditionCapability> CSS:isRealizedBy <https://hsu-hh.de/skills/examples#OpcUaAdditionSkill>;
+					a CaSk:ProvidedCapability, owl:NamedIndividual. 
+<https://hsu-hh.de/modules#ExampleModule> CSS:providesCapability <https://hsu-hh.de/capabilities/examples#AdditionCapability> .<https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_UaInterface_Start> a OpcUa:UAMethod,
+										CaSk:Start,
+										owl:NamedIndiviual;
+									OpcUa:browseName "start";  
+									OpcUa:browseNamespace 2;
+									OpcUa:nodeId "ns=2;s=QualifiedName{name=https://hsu-hh.de/skills/examples#OpcUaAdditionSkill, namespaceIndex=2}/start";
+									OpcUa:nodeNamespace 2;
+									OpcUa:displayName "start".   
+<https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_UaInterface> CaSk:exposesSkillMethod <https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_UaInterface_Start>; 
+									OpcUa:hasComponent <https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_UaInterface_Start>. 
+<https://hsu-hh.de/skills/examples#OpcUaAdditionSkill> CaSk:hasSkillMethod <https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_UaInterface_Start>. 
+<https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_UaInterface_Start> CaSk:invokes <https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_StateMachine_StartCommand> .   
+<https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_UaInterface_Hold> a OpcUa:UAMethod,
+										CaSk:Hold,
+										owl:NamedIndiviual;
+									OpcUa:browseName "hold";  
+									OpcUa:browseNamespace 2;
+									OpcUa:nodeId "ns=2;s=QualifiedName{name=https://hsu-hh.de/skills/examples#OpcUaAdditionSkill, namespaceIndex=2}/hold";
+									OpcUa:nodeNamespace 2;
+									OpcUa:displayName "hold".   
+<https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_UaInterface> CaSk:exposesSkillMethod <https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_UaInterface_Hold>; 
+									OpcUa:hasComponent <https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_UaInterface_Hold>. 
+<https://hsu-hh.de/skills/examples#OpcUaAdditionSkill> CaSk:hasSkillMethod <https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_UaInterface_Hold>. 
+<https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_UaInterface_Hold> CaSk:invokes <https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_StateMachine_HoldCommand> .   
+<https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_UaInterface_Unhold> a OpcUa:UAMethod,
+										CaSk:Unhold,
+										owl:NamedIndiviual;
+									OpcUa:browseName "unhold";  
+									OpcUa:browseNamespace 2;
+									OpcUa:nodeId "ns=2;s=QualifiedName{name=https://hsu-hh.de/skills/examples#OpcUaAdditionSkill, namespaceIndex=2}/unhold";
+									OpcUa:nodeNamespace 2;
+									OpcUa:displayName "unhold".   
+<https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_UaInterface> CaSk:exposesSkillMethod <https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_UaInterface_Unhold>; 
+									OpcUa:hasComponent <https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_UaInterface_Unhold>. 
+<https://hsu-hh.de/skills/examples#OpcUaAdditionSkill> CaSk:hasSkillMethod <https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_UaInterface_Unhold>. 
+<https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_UaInterface_Unhold> CaSk:invokes <https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_StateMachine_UnholdCommand> .   
+<https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_UaInterface_Suspend> a OpcUa:UAMethod,
+										CaSk:Suspend,
+										owl:NamedIndiviual;
+									OpcUa:browseName "suspend";  
+									OpcUa:browseNamespace 2;
+									OpcUa:nodeId "ns=2;s=QualifiedName{name=https://hsu-hh.de/skills/examples#OpcUaAdditionSkill, namespaceIndex=2}/suspend";
+									OpcUa:nodeNamespace 2;
+									OpcUa:displayName "suspend".   
+<https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_UaInterface> CaSk:exposesSkillMethod <https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_UaInterface_Suspend>; 
+									OpcUa:hasComponent <https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_UaInterface_Suspend>. 
+<https://hsu-hh.de/skills/examples#OpcUaAdditionSkill> CaSk:hasSkillMethod <https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_UaInterface_Suspend>. 
+<https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_UaInterface_Suspend> CaSk:invokes <https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_StateMachine_SuspendCommand> .   
+<https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_UaInterface_Unsuspend> a OpcUa:UAMethod,
+										CaSk:Unsuspend,
+										owl:NamedIndiviual;
+									OpcUa:browseName "unsuspend";  
+									OpcUa:browseNamespace 2;
+									OpcUa:nodeId "ns=2;s=QualifiedName{name=https://hsu-hh.de/skills/examples#OpcUaAdditionSkill, namespaceIndex=2}/unsuspend";
+									OpcUa:nodeNamespace 2;
+									OpcUa:displayName "unsuspend".   
+<https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_UaInterface> CaSk:exposesSkillMethod <https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_UaInterface_Unsuspend>; 
+									OpcUa:hasComponent <https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_UaInterface_Unsuspend>. 
+<https://hsu-hh.de/skills/examples#OpcUaAdditionSkill> CaSk:hasSkillMethod <https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_UaInterface_Unsuspend>. 
+<https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_UaInterface_Unsuspend> CaSk:invokes <https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_StateMachine_UnsuspendCommand> .   
+<https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_UaInterface_Reset> a OpcUa:UAMethod,
+										CaSk:Reset,
+										owl:NamedIndiviual;
+									OpcUa:browseName "reset";  
+									OpcUa:browseNamespace 2;
+									OpcUa:nodeId "ns=2;s=QualifiedName{name=https://hsu-hh.de/skills/examples#OpcUaAdditionSkill, namespaceIndex=2}/reset";
+									OpcUa:nodeNamespace 2;
+									OpcUa:displayName "reset".   
+<https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_UaInterface> CaSk:exposesSkillMethod <https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_UaInterface_Reset>; 
+									OpcUa:hasComponent <https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_UaInterface_Reset>. 
+<https://hsu-hh.de/skills/examples#OpcUaAdditionSkill> CaSk:hasSkillMethod <https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_UaInterface_Reset>. 
+<https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_UaInterface_Reset> CaSk:invokes <https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_StateMachine_ResetCommand> .   
+<https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_UaInterface_Stop> a OpcUa:UAMethod,
+										CaSk:Stop,
+										owl:NamedIndiviual;
+									OpcUa:browseName "stop";  
+									OpcUa:browseNamespace 2;
+									OpcUa:nodeId "ns=2;s=QualifiedName{name=https://hsu-hh.de/skills/examples#OpcUaAdditionSkill, namespaceIndex=2}/stop";
+									OpcUa:nodeNamespace 2;
+									OpcUa:displayName "stop".   
+<https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_UaInterface> CaSk:exposesSkillMethod <https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_UaInterface_Stop>; 
+									OpcUa:hasComponent <https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_UaInterface_Stop>. 
+<https://hsu-hh.de/skills/examples#OpcUaAdditionSkill> CaSk:hasSkillMethod <https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_UaInterface_Stop>. 
+<https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_UaInterface_Stop> CaSk:invokes <https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_StateMachine_StopCommand> .   
+<https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_UaInterface_Abort> a OpcUa:UAMethod,
+										CaSk:Abort,
+										owl:NamedIndiviual;
+									OpcUa:browseName "abort";  
+									OpcUa:browseNamespace 2;
+									OpcUa:nodeId "ns=2;s=QualifiedName{name=https://hsu-hh.de/skills/examples#OpcUaAdditionSkill, namespaceIndex=2}/abort";
+									OpcUa:nodeNamespace 2;
+									OpcUa:displayName "abort".   
+<https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_UaInterface> CaSk:exposesSkillMethod <https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_UaInterface_Abort>; 
+									OpcUa:hasComponent <https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_UaInterface_Abort>. 
+<https://hsu-hh.de/skills/examples#OpcUaAdditionSkill> CaSk:hasSkillMethod <https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_UaInterface_Abort>. 
+<https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_UaInterface_Abort> CaSk:invokes <https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_StateMachine_AbortCommand> .   
+<https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_UaInterface_Clear> a OpcUa:UAMethod,
+										CaSk:Clear,
+										owl:NamedIndiviual;
+									OpcUa:browseName "clear";  
+									OpcUa:browseNamespace 2;
+									OpcUa:nodeId "ns=2;s=QualifiedName{name=https://hsu-hh.de/skills/examples#OpcUaAdditionSkill, namespaceIndex=2}/clear";
+									OpcUa:nodeNamespace 2;
+									OpcUa:displayName "clear".   
+<https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_UaInterface> CaSk:exposesSkillMethod <https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_UaInterface_Clear>; 
+									OpcUa:hasComponent <https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_UaInterface_Clear>. 
+<https://hsu-hh.de/skills/examples#OpcUaAdditionSkill> CaSk:hasSkillMethod <https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_UaInterface_Clear>. 
+<https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_UaInterface_Clear> CaSk:invokes <https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_StateMachine_ClearCommand> .   
+<https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_UaInterface_GetOutputs> a OpcUa:UAMethod,
+										CaSk:GetOutputs,
+										owl:NamedIndiviual;
+									OpcUa:browseName "getOutputs";  
+									OpcUa:browseNamespace 2;
+									OpcUa:nodeId "ns=2;s=QualifiedName{name=https://hsu-hh.de/skills/examples#OpcUaAdditionSkill, namespaceIndex=2}/getOutputs";
+									OpcUa:nodeNamespace 2;
+									OpcUa:displayName "getOutputs".   
+<https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_UaInterface> CaSk:exposesSkillMethod <https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_UaInterface_GetOutputs>; 
+									OpcUa:hasComponent <https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_UaInterface_GetOutputs>. 
+<https://hsu-hh.de/skills/examples#OpcUaAdditionSkill> CaSk:hasSkillMethod <https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_UaInterface_GetOutputs>. 
+<https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_a> a CSS:SkillParameter,
+										owl:NamedIndividual;
+								CaSk:hasVariableName "a";
+								CaSk:hasVariableType xsd:integer;
+								CaSk:isRequired true;
+								CaSk:hasDefaultValue 0.
+<https://hsu-hh.de/skills/examples#OpcUaAdditionSkill> CSS:hasParameter <https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_a>.<https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_a_Option1> a CaSk:SkillVariableOption,
+										owl:NamedIndividual;
+								CaSk:hasOptionValue 4.
+<https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_a> CaSk:hasSkillVariableOption <https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_a_Option1>.<https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_a_Option2> a CaSk:SkillVariableOption,
+										owl:NamedIndividual;
+								CaSk:hasOptionValue 3.
+<https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_a> CaSk:hasSkillVariableOption <https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_a_Option2>.<https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_a_Option3> a CaSk:SkillVariableOption,
+										owl:NamedIndividual;
+								CaSk:hasOptionValue 2.
+<https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_a> CaSk:hasSkillVariableOption <https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_a_Option3>.<https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_a> a OpcUa:UAVariable,
+										owl:NamedIndividual;
+									OpcUa:browseName "a";  
+									OpcUa:browseNamespace 2;
+									OpcUa:nodeId "ns=2;s=QualifiedName{name=https://hsu-hh.de/skills/examples#OpcUaAdditionSkill, namespaceIndex=2}/a";
+									OpcUa:nodeNamespace 2;
+									OpcUa:displayName "a";
+									OpcUa:accessLevel 3;
+									OpcUa:hasDataType xsd:integer;
+									OpcUa:historizing false;
+									OpcUa:userAccessLevel 3;
+									OpcUa:valueRank -1.
+<https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_UaInterface> OpcUa:organizes <https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_a>; 
+							CSS:exposes <https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_a>. 
+<https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_b> a CSS:SkillParameter,
+										owl:NamedIndividual;
+								CaSk:hasVariableName "b";
+								CaSk:hasVariableType xsd:integer;
+								CaSk:isRequired true;
+								CaSk:hasDefaultValue 0.
+<https://hsu-hh.de/skills/examples#OpcUaAdditionSkill> CSS:hasParameter <https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_b>.<https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_b> a OpcUa:UAVariable,
+										owl:NamedIndividual;
+									OpcUa:browseName "b";  
+									OpcUa:browseNamespace 2;
+									OpcUa:nodeId "ns=2;s=QualifiedName{name=https://hsu-hh.de/skills/examples#OpcUaAdditionSkill, namespaceIndex=2}/b";
+									OpcUa:nodeNamespace 2;
+									OpcUa:displayName "b";
+									OpcUa:accessLevel 3;
+									OpcUa:hasDataType xsd:integer;
+									OpcUa:historizing false;
+									OpcUa:userAccessLevel 3;
+									OpcUa:valueRank -1.
+<https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_UaInterface> OpcUa:organizes <https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_b>; 
+							CSS:exposes <https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_b>. 
+<https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_result> a CaSk:SkillOutput,
+										owl:NamedIndividual;
+								CaSk:hasVariableName "result";
+								CaSk:hasVariableType xsd:integer;
+								CaSk:isRequired false.
+<https://hsu-hh.de/skills/examples#OpcUaAdditionSkill> CaSk:hasSkillOutput <https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_result>.<https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_result> a OpcUa:UAVariable,
+										owl:NamedIndividual;
+									OpcUa:browseName "result";  
+									OpcUa:browseNamespace 2;
+									OpcUa:nodeId "ns=2;s=QualifiedName{name=https://hsu-hh.de/skills/examples#OpcUaAdditionSkill, namespaceIndex=2}/result";
+									OpcUa:nodeNamespace 2;
+									OpcUa:displayName "result";
+									OpcUa:accessLevel 1;
+									OpcUa:hasDataType xsd:integer;
+									OpcUa:historizing false;
+									OpcUa:userAccessLevel 1;
+									OpcUa:valueRank -1.
+<https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_UaInterface> OpcUa:organizes <https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_result>; 
+							CSS:exposes <https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_result>. 
+<https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_StateMachine> a stateMachine:StateMachine.  <https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_StateMachine_Aborting> a stateMachine:Aborting, 													owl:NamedIndividual; 											stateMachine:State_is_connected_with_Transition <https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_StateMachine_AbortingStateComplete>.  <https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_StateMachine_Clearing> a stateMachine:Clearing,													owl:NamedIndividual;											stateMachine:State_is_connected_with_Transition <https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_StateMachine_AbortCommand>,													<https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_StateMachine_ClearingStateComplete>. <https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_StateMachine_Complete> a stateMachine:Complete,													owl:NamedIndividual;											stateMachine:State_is_connected_with_Transition <https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_StateMachine_AbortCommand>,													<https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_StateMachine_ResetCommand>, 													<https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_StateMachine_StopCommand>. <https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_StateMachine_Completing> a stateMachine:Completing,													owl:NamedIndividual;											stateMachine:State_is_connected_with_Transition <https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_StateMachine_AbortCommand>,											<https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_StateMachine_CompletingStateComplete>, 											<https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_StateMachine_StopCommand>. <https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_StateMachine_Execute> a stateMachine:Execute,													owl:NamedIndividual;											stateMachine:State_is_connected_with_Transition <https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_StateMachine_AbortCommand>,													<https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_StateMachine_ExecuteStateComplete>, 													<https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_StateMachine_HoldCommand>,													<https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_StateMachine_StopCommand>, 													<https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_StateMachine_SuspendCommand>. <https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_StateMachine_Holding> a stateMachine:Holding,													owl:NamedIndividual;											stateMachine:State_is_connected_with_Transition <https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_StateMachine_AbortCommand>,													<https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_StateMachine_HoldingStateComplete>, 													<https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_StateMachine_StopCommand>. <https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_StateMachine_Resetting> a stateMachine:Resetting,													owl:NamedIndividual;											stateMachine:State_is_connected_with_Transition <https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_StateMachine_AbortCommand>,													<https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_StateMachine_ResettingStateComplete>, 													<https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_StateMachine_StopCommand>. <https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_StateMachine_Starting> a stateMachine:Starting,													owl:NamedIndividual;											stateMachine:State_is_connected_with_Transition <https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_StateMachine_AbortCommand>,													<https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_StateMachine_StartingStateComplete>, 													<https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_StateMachine_StopCommand>. <https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_StateMachine_Stopping> a stateMachine:Stopping,													owl:NamedIndividual;											stateMachine:State_is_connected_with_Transition <https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_StateMachine_AbortCommand>,													<https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_StateMachine_StoppingStateComplete>. <https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_StateMachine_Suspending> a stateMachine:Suspending,													owl:NamedIndividual;											stateMachine:State_is_connected_with_Transition <https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_StateMachine_AbortCommand>,													<https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_StateMachine_StopCommand>, 													<https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_StateMachine_SuspendingStateComplete>. <https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_StateMachine_Unholding> a stateMachine:Unholding,													owl:NamedIndividual;											stateMachine:State_is_connected_with_Transition <https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_StateMachine_AbortCommand>,													<https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_StateMachine_StopCommand>, 													<https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_StateMachine_UnholdingStateComplete>. <https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_StateMachine_Unsuspending> a stateMachine:Unsuspending,													owl:NamedIndividual;											stateMachine:State_is_connected_with_Transition <https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_StateMachine_AbortCommand>,													<https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_StateMachine_StopCommand>, 													<https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_StateMachine_UnsuspendingStateComplete>. <https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_StateMachine_Aborted> a stateMachine:Aborted,													owl:NamedIndividual;											stateMachine:State_is_connected_with_Transition <https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_StateMachine_ClearCommand>. <https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_StateMachine_Held> a stateMachine:Held,													owl:NamedIndividual;											stateMachine:State_is_connected_with_Transition <https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_StateMachine_AbortCommand>,													<https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_StateMachine_StopCommand>, 													<https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_StateMachine_UnholdCommand>. <https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_StateMachine_Idle> a stateMachine:Idle,													owl:NamedIndividual;											stateMachine:State_is_connected_with_Transition <https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_StateMachine_AbortCommand>,													<https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_StateMachine_StartCommand>, 													<https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_StateMachine_StopCommand>. <https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_StateMachine_Stopped> a stateMachine:Stopped,													owl:NamedIndividual;											stateMachine:State_is_connected_with_Transition <https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_StateMachine_AbortCommand>,													<https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_StateMachine_ResetCommand>. <https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_StateMachine_Suspended> a stateMachine:Suspended,													owl:NamedIndividual;											stateMachine:State_is_connected_with_Transition <https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_StateMachine_AbortCommand>,													<https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_StateMachine_StopCommand>, 													<https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_StateMachine_UnsuspendCommand>. 													<https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_StateMachine_AbortCommand> a stateMachine:AbortCommand,													owl:NamedIndividual;											stateMachine:Transition_is_connected_with_State <https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_StateMachine_Aborting>. <https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_StateMachine_ClearCommand> a stateMachine:ClearCommand,													owl:NamedIndividual;											stateMachine:Transition_is_connected_with_State <https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_StateMachine_Clearing>. <https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_StateMachine_HoldCommand> a stateMachine:HoldCommand,													owl:NamedIndividual;											stateMachine:Transition_is_connected_with_State <https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_StateMachine_Holding>. <https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_StateMachine_ResetCommand> a stateMachine:ResetCommand,													owl:NamedIndividual;											stateMachine:Transition_is_connected_with_State <https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_StateMachine_Resetting>. <https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_StateMachine_StartCommand> a stateMachine:StartCommand,													owl:NamedIndividual;											stateMachine:Transition_is_connected_with_State <https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_StateMachine_Starting>. <https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_StateMachine_StopCommand> a stateMachine:StopCommand,													owl:NamedIndividual;											stateMachine:Transition_is_connected_with_State <https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_StateMachine_Stopping>. <https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_StateMachine_SuspendCommand> a stateMachine:SuspendCommand,													owl:NamedIndividual;											stateMachine:Transition_is_connected_with_State <https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_StateMachine_Suspending>. <https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_StateMachine_UnholdCommand> a stateMachine:Un-HoldCommand,													owl:NamedIndividual;											stateMachine:Transition_is_connected_with_State <https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_StateMachine_Unholding>. <https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_StateMachine_UnsuspendCommand> a stateMachine:UnsuspendCommand,													owl:NamedIndividual;											stateMachine:Transition_is_connected_with_State <https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_StateMachine_Unsuspending>. <https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_StateMachine_AbortingStateComplete> a stateMachine:AbortingStateComplete,													owl:NamedIndividual;											stateMachine:Transition_is_connected_with_State <https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_StateMachine_Aborted>. <https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_StateMachine_ClearingStateComplete> a stateMachine:ClearingStateComplete,													owl:NamedIndividual;											stateMachine:Transition_is_connected_with_State <https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_StateMachine_Stopped>. <https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_StateMachine_CompletingStateComplete> a stateMachine:CompletingStateComplete,													owl:NamedIndividual;											stateMachine:Transition_is_connected_with_State <https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_StateMachine_Complete>. <https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_StateMachine_ExecuteStateComplete> a stateMachine:ExecuteStateComplete,													owl:NamedIndividual;											stateMachine:Transition_is_connected_with_State <https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_StateMachine_Completing>. <https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_StateMachine_HoldingStateComplete> a stateMachine:HoldingStateComplete,													owl:NamedIndividual;											stateMachine:Transition_is_connected_with_State <https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_StateMachine_Held>. <https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_StateMachine_ResettingStateComplete> a stateMachine:ResettingStateComplete,													owl:NamedIndividual;											stateMachine:Transition_is_connected_with_State <https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_StateMachine_Idle>. <https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_StateMachine_StartingStateComplete> a stateMachine:StartingStateComplete,													owl:NamedIndividual;											stateMachine:Transition_is_connected_with_State <https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_StateMachine_Execute>. <https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_StateMachine_StoppingStateComplete> a stateMachine:StoppingStateComplete,													owl:NamedIndividual;											stateMachine:Transition_is_connected_with_State <https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_StateMachine_Stopped>. <https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_StateMachine_SuspendingStateComplete> a stateMachine:SuspendingStateComplete,													owl:NamedIndividual;											stateMachine:Transition_is_connected_with_State <https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_StateMachine_Suspended>. <https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_StateMachine_UnholdingStateComplete> a stateMachine:UnholdingStateComplete,													owl:NamedIndividual;											stateMachine:Transition_is_connected_with_State <https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_StateMachine_Execute>. <https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_StateMachine_UnsuspendingStateComplete> a stateMachine:UnsuspendingStateComplete,													owl:NamedIndividual;											stateMachine:Transition_is_connected_with_State <https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_StateMachine_Execute>. 											<https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_StateMachine> stateMachine:hasState <https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_StateMachine_Aborted>, 															<https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_StateMachine_Aborting>, 															<https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_StateMachine_Clearing>,															<https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_StateMachine_Complete>, 															<https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_StateMachine_Completing>,															<https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_StateMachine_Execute>, 															<https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_StateMachine_Held>, 															<https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_StateMachine_Holding>,															<https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_StateMachine_Idle>, 															<https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_StateMachine_Resetting>, 															<https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_StateMachine_Starting>,															<https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_StateMachine_Stopped>, 															<https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_StateMachine_Stopping>, 															<https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_StateMachine_Suspended>,															<https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_StateMachine_Suspending>, 															<https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_StateMachine_Unholding>,															<https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_StateMachine_Unsuspending>;										stateMachine:hasTransition <https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_StateMachine_AbortCommand>,																	<https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_StateMachine_AbortingStateComplete>, 																	<https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_StateMachine_ClearCommand>,																	<https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_StateMachine_ClearingStateComplete>, 																	<https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_StateMachine_CompletingStateComplete>,																	<https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_StateMachine_ExecuteStateComplete>, 																	<https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_StateMachine_HoldCommand>,																	<https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_StateMachine_HoldingStateComplete>, 																	<https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_StateMachine_ResetCommand>,																	<https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_StateMachine_ResettingStateComplete>, 																	<https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_StateMachine_StartCommand>,																	<https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_StateMachine_StartingStateComplete>, 																	<https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_StateMachine_StopCommand>,																	<https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_StateMachine_StoppingStateComplete>, 																	<https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_StateMachine_SuspendCommand>,																	<https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_StateMachine_SuspendingStateComplete>, 																	<https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_StateMachine_UnholdCommand>,																	<https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_StateMachine_UnholdingStateComplete>, 																	<https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_StateMachine_UnsuspendCommand>,																	<https://hsu-hh.de/skills/examples#OpcUaAdditionSkill_StateMachine_UnsuspendingStateComplete>. 
