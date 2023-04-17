@@ -7,6 +7,7 @@
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:OpcUa="http://www.hsu-ifa.de/ontologies/OpcUa#"
+	 xmlns:DINEN61360="http://www.hsu-ifa.de/ontologies/DINEN61360#"
      xmlns:swrla="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#">
     <owl:Ontology rdf:about="http://www.w3id.org/hsu-aut/caskman#">
         <owl:versionIRI rdf:resource="http://www.w3id.org/hsu-aut/caskman/4.3.0#"/>
@@ -226,6 +227,642 @@
     <owl:Class rdf:about="http://www.w3id.org/hsu-aut/caskman#RestSkillInterface">
         <rdfs:subClassOf rdf:resource="http://www.w3id.org/hsu-aut/css#SkillInterface"/>
     </owl:Class>
+	
+	
+		
+	<!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3id.org/hsu-aut/caskman#MTP_Command_Abort -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/hsu-aut/caskman#MTP_Command_Abort">
+        <rdf:type rdf:resource="http://www.hsu-ifa.de/ontologies/DINEN61360#Instance_Description"/>
+        <DINEN61360:Instance_Description_has_Type rdf:resource="http://www.w3id.org/hsu-aut/cask#SkillCommandVariable_TD"/>
+        <DINEN61360:Expression_Goal>Requirement</DINEN61360:Expression_Goal>
+        <DINEN61360:Logic_Interpretation>=</DINEN61360:Logic_Interpretation>
+        <DINEN61360:Value>256</DINEN61360:Value>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3id.org/hsu-aut/caskman#MTP_Command_Complete -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/hsu-aut/caskman#MTP_Command_Complete">
+        <rdf:type rdf:resource="http://www.hsu-ifa.de/ontologies/DINEN61360#Instance_Description"/>
+        <DINEN61360:Instance_Description_has_Type rdf:resource="http://www.w3id.org/hsu-aut/cask#SkillCommandVariable_TD"/>
+        <DINEN61360:Expression_Goal>Requirement</DINEN61360:Expression_Goal>
+        <DINEN61360:Logic_Interpretation>=</DINEN61360:Logic_Interpretation>
+        <DINEN61360:Value>1024</DINEN61360:Value>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3id.org/hsu-aut/caskman#MTP_Command_Hold -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/hsu-aut/caskman#MTP_Command_Hold">
+        <rdf:type rdf:resource="http://www.hsu-ifa.de/ontologies/DINEN61360#Instance_Description"/>
+        <DINEN61360:Instance_Description_has_Type rdf:resource="http://www.w3id.org/hsu-aut/cask#SkillCommandVariable_TD"/>
+        <DINEN61360:Expression_Goal>Requirement</DINEN61360:Expression_Goal>
+        <DINEN61360:Logic_Interpretation>=</DINEN61360:Logic_Interpretation>
+        <DINEN61360:Value>16</DINEN61360:Value>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3id.org/hsu-aut/caskman#MTP_Command_Pause -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/hsu-aut/caskman#MTP_Command_Pause">
+        <rdf:type rdf:resource="http://www.hsu-ifa.de/ontologies/DINEN61360#Instance_Description"/>
+        <DINEN61360:Instance_Description_has_Type rdf:resource="http://www.w3id.org/hsu-aut/cask#SkillCommandVariable_TD"/>
+        <DINEN61360:Expression_Goal>Requirement</DINEN61360:Expression_Goal>
+        <DINEN61360:Logic_Interpretation>=</DINEN61360:Logic_Interpretation>
+        <DINEN61360:Value>64</DINEN61360:Value>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3id.org/hsu-aut/caskman#MTP_Command_Reset -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/hsu-aut/caskman#MTP_Command_Reset">
+        <rdf:type rdf:resource="http://www.hsu-ifa.de/ontologies/DINEN61360#Instance_Description"/>
+        <DINEN61360:Instance_Description_has_Type rdf:resource="http://www.w3id.org/hsu-aut/cask#SkillCommandVariable_TD"/>
+        <DINEN61360:Expression_Goal>Requirement</DINEN61360:Expression_Goal>
+        <DINEN61360:Logic_Interpretation>=</DINEN61360:Logic_Interpretation>
+        <DINEN61360:Value>2</DINEN61360:Value>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3id.org/hsu-aut/caskman#MTP_Command_Restart -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/hsu-aut/caskman#MTP_Command_Restart">
+        <rdf:type rdf:resource="http://www.hsu-ifa.de/ontologies/DINEN61360#Instance_Description"/>
+        <DINEN61360:Instance_Description_has_Type rdf:resource="http://www.w3id.org/hsu-aut/cask#SkillCommandVariable_TD"/>
+        <DINEN61360:Expression_Goal>Requirement</DINEN61360:Expression_Goal>
+        <DINEN61360:Logic_Interpretation>=</DINEN61360:Logic_Interpretation>
+        <DINEN61360:Value>512</DINEN61360:Value>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3id.org/hsu-aut/caskman#MTP_Command_Resume -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/hsu-aut/caskman#MTP_Command_Resume">
+        <rdf:type rdf:resource="http://www.hsu-ifa.de/ontologies/DINEN61360#Instance_Description"/>
+        <DINEN61360:Instance_Description_has_Type rdf:resource="http://www.w3id.org/hsu-aut/cask#SkillCommandVariable_TD"/>
+        <DINEN61360:Expression_Goal>Requirement</DINEN61360:Expression_Goal>
+        <DINEN61360:Logic_Interpretation>=</DINEN61360:Logic_Interpretation>
+        <DINEN61360:Value>128</DINEN61360:Value>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3id.org/hsu-aut/caskman#MTP_Command_Start -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/hsu-aut/caskman#MTP_Command_Start">
+        <rdf:type rdf:resource="http://www.hsu-ifa.de/ontologies/DINEN61360#Instance_Description"/>
+        <DINEN61360:Instance_Description_has_Type rdf:resource="http://www.w3id.org/hsu-aut/cask#SkillCommandVariable_TD"/>
+        <DINEN61360:Expression_Goal>Requirement</DINEN61360:Expression_Goal>
+        <DINEN61360:Logic_Interpretation>=</DINEN61360:Logic_Interpretation>
+        <DINEN61360:Value>4</DINEN61360:Value>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3id.org/hsu-aut/caskman#MTP_Command_Stop -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/hsu-aut/caskman#MTP_Command_Stop">
+        <rdf:type rdf:resource="http://www.hsu-ifa.de/ontologies/DINEN61360#Instance_Description"/>
+        <DINEN61360:Instance_Description_has_Type rdf:resource="http://www.w3id.org/hsu-aut/cask#SkillCommandVariable_TD"/>
+        <DINEN61360:Expression_Goal>Requirement</DINEN61360:Expression_Goal>
+        <DINEN61360:Logic_Interpretation>=</DINEN61360:Logic_Interpretation>
+        <DINEN61360:Value>8</DINEN61360:Value>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3id.org/hsu-aut/caskman#MTP_Command_Unhold -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/hsu-aut/caskman#MTP_Command_Unhold">
+        <rdf:type rdf:resource="http://www.hsu-ifa.de/ontologies/DINEN61360#Instance_Description"/>
+        <DINEN61360:Instance_Description_has_Type rdf:resource="http://www.w3id.org/hsu-aut/cask#SkillCommandVariable_TD"/>
+        <DINEN61360:Expression_Goal>Requirement</DINEN61360:Expression_Goal>
+        <DINEN61360:Logic_Interpretation>=</DINEN61360:Logic_Interpretation>
+        <DINEN61360:Value rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">32</DINEN61360:Value>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3id.org/hsu-aut/caskman#MTP_CurrentState_Aborted -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/hsu-aut/caskman#MTP_CurrentState_Aborted">
+        <rdf:type rdf:resource="http://www.hsu-ifa.de/ontologies/DINEN61360#Instance_Description"/>
+        <DINEN61360:Instance_Description_has_Type rdf:resource="http://www.w3id.org/hsu-aut/cask#CurrentStateOutput_TD"/>
+        <DINEN61360:Expression_Goal>Assurance</DINEN61360:Expression_Goal>
+        <DINEN61360:Logic_Interpretation>=</DINEN61360:Logic_Interpretation>
+        <DINEN61360:Value rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">512</DINEN61360:Value>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3id.org/hsu-aut/caskman#MTP_CurrentState_Aborting -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/hsu-aut/caskman#MTP_CurrentState_Aborting">
+        <rdf:type rdf:resource="http://www.hsu-ifa.de/ontologies/DINEN61360#Instance_Description"/>
+        <DINEN61360:Instance_Description_has_Type rdf:resource="http://www.w3id.org/hsu-aut/cask#CurrentStateOutput_TD"/>
+        <DINEN61360:Expression_Goal>Assurance</DINEN61360:Expression_Goal>
+        <DINEN61360:Logic_Interpretation>=</DINEN61360:Logic_Interpretation>
+        <DINEN61360:Value rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">256</DINEN61360:Value>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3id.org/hsu-aut/caskman#MTP_CurrentState_Completed -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/hsu-aut/caskman#MTP_CurrentState_Completed">
+        <rdf:type rdf:resource="http://www.hsu-ifa.de/ontologies/DINEN61360#Instance_Description"/>
+        <DINEN61360:Instance_Description_has_Type rdf:resource="http://www.w3id.org/hsu-aut/cask#CurrentStateOutput_TD"/>
+        <DINEN61360:Expression_Goal>Assurance</DINEN61360:Expression_Goal>
+        <DINEN61360:Logic_Interpretation>=</DINEN61360:Logic_Interpretation>
+        <DINEN61360:Value rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">131072</DINEN61360:Value>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3id.org/hsu-aut/caskman#MTP_CurrentState_Completing -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/hsu-aut/caskman#MTP_CurrentState_Completing">
+        <rdf:type rdf:resource="http://www.hsu-ifa.de/ontologies/DINEN61360#Instance_Description"/>
+        <DINEN61360:Instance_Description_has_Type rdf:resource="http://www.w3id.org/hsu-aut/cask#CurrentStateOutput_TD"/>
+        <DINEN61360:Expression_Goal>Assurance</DINEN61360:Expression_Goal>
+        <DINEN61360:Logic_Interpretation>=</DINEN61360:Logic_Interpretation>
+        <DINEN61360:Value rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">65536</DINEN61360:Value>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3id.org/hsu-aut/caskman#MTP_CurrentState_Execute -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/hsu-aut/caskman#MTP_CurrentState_Execute">
+        <rdf:type rdf:resource="http://www.hsu-ifa.de/ontologies/DINEN61360#Instance_Description"/>
+        <DINEN61360:Instance_Description_has_Type rdf:resource="http://www.w3id.org/hsu-aut/cask#CurrentStateOutput_TD"/>
+        <DINEN61360:Expression_Goal>Assurance</DINEN61360:Expression_Goal>
+        <DINEN61360:Logic_Interpretation>=</DINEN61360:Logic_Interpretation>
+        <DINEN61360:Value rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">64</DINEN61360:Value>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3id.org/hsu-aut/caskman#MTP_CurrentState_Held -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/hsu-aut/caskman#MTP_CurrentState_Held">
+        <rdf:type rdf:resource="http://www.hsu-ifa.de/ontologies/DINEN61360#Instance_Description"/>
+        <DINEN61360:Instance_Description_has_Type rdf:resource="http://www.w3id.org/hsu-aut/cask#CurrentStateOutput_TD"/>
+        <DINEN61360:Expression_Goal>Assurance</DINEN61360:Expression_Goal>
+        <DINEN61360:Logic_Interpretation>=</DINEN61360:Logic_Interpretation>
+        <DINEN61360:Value rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2048</DINEN61360:Value>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3id.org/hsu-aut/caskman#MTP_CurrentState_Holding -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/hsu-aut/caskman#MTP_CurrentState_Holding">
+        <rdf:type rdf:resource="http://www.hsu-ifa.de/ontologies/DINEN61360#Instance_Description"/>
+        <DINEN61360:Instance_Description_has_Type rdf:resource="http://www.w3id.org/hsu-aut/cask#CurrentStateOutput_TD"/>
+        <DINEN61360:Expression_Goal>Assurance</DINEN61360:Expression_Goal>
+        <DINEN61360:Logic_Interpretation>=</DINEN61360:Logic_Interpretation>
+        <DINEN61360:Value rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1024</DINEN61360:Value>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3id.org/hsu-aut/caskman#MTP_CurrentState_Idle -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/hsu-aut/caskman#MTP_CurrentState_Idle">
+        <rdf:type rdf:resource="http://www.hsu-ifa.de/ontologies/DINEN61360#Instance_Description"/>
+        <DINEN61360:Instance_Description_has_Type rdf:resource="http://www.w3id.org/hsu-aut/cask#CurrentStateOutput_TD"/>
+        <DINEN61360:Expression_Goal>Assurance</DINEN61360:Expression_Goal>
+        <DINEN61360:Logic_Interpretation>=</DINEN61360:Logic_Interpretation>
+        <DINEN61360:Value rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">16</DINEN61360:Value>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3id.org/hsu-aut/caskman#MTP_CurrentState_Paused -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/hsu-aut/caskman#MTP_CurrentState_Paused">
+        <rdf:type rdf:resource="http://www.hsu-ifa.de/ontologies/DINEN61360#Instance_Description"/>
+        <DINEN61360:Instance_Description_has_Type rdf:resource="http://www.w3id.org/hsu-aut/cask#CurrentStateOutput_TD"/>
+        <DINEN61360:Expression_Goal>Assurance</DINEN61360:Expression_Goal>
+        <DINEN61360:Logic_Interpretation>=</DINEN61360:Logic_Interpretation>
+        <DINEN61360:Value rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">32</DINEN61360:Value>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3id.org/hsu-aut/caskman#MTP_CurrentState_Pausing -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/hsu-aut/caskman#MTP_CurrentState_Pausing">
+        <rdf:type rdf:resource="http://www.hsu-ifa.de/ontologies/DINEN61360#Instance_Description"/>
+        <DINEN61360:Instance_Description_has_Type rdf:resource="http://www.w3id.org/hsu-aut/cask#CurrentStateOutput_TD"/>
+        <DINEN61360:Expression_Goal>Assurance</DINEN61360:Expression_Goal>
+        <DINEN61360:Logic_Interpretation>=</DINEN61360:Logic_Interpretation>
+        <DINEN61360:Value rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8192</DINEN61360:Value>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3id.org/hsu-aut/caskman#MTP_CurrentState_Resetting -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/hsu-aut/caskman#MTP_CurrentState_Resetting">
+        <rdf:type rdf:resource="http://www.hsu-ifa.de/ontologies/DINEN61360#Instance_Description"/>
+        <DINEN61360:Instance_Description_has_Type rdf:resource="http://www.w3id.org/hsu-aut/cask#CurrentStateOutput_TD"/>
+        <DINEN61360:Expression_Goal>Assurance</DINEN61360:Expression_Goal>
+        <DINEN61360:Logic_Interpretation>=</DINEN61360:Logic_Interpretation>
+        <DINEN61360:Value rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">32768</DINEN61360:Value>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3id.org/hsu-aut/caskman#MTP_CurrentState_Resuming -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/hsu-aut/caskman#MTP_CurrentState_Resuming">
+        <rdf:type rdf:resource="http://www.hsu-ifa.de/ontologies/DINEN61360#Instance_Description"/>
+        <DINEN61360:Instance_Description_has_Type rdf:resource="http://www.w3id.org/hsu-aut/cask#CurrentStateOutput_TD"/>
+        <DINEN61360:Expression_Goal>Assurance</DINEN61360:Expression_Goal>
+        <DINEN61360:Logic_Interpretation>=</DINEN61360:Logic_Interpretation>
+        <DINEN61360:Value rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">16384</DINEN61360:Value>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3id.org/hsu-aut/caskman#MTP_CurrentState_Starting -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/hsu-aut/caskman#MTP_CurrentState_Starting">
+        <rdf:type rdf:resource="http://www.hsu-ifa.de/ontologies/DINEN61360#Instance_Description"/>
+        <DINEN61360:Instance_Description_has_Type rdf:resource="http://www.w3id.org/hsu-aut/cask#CurrentStateOutput_TD"/>
+        <DINEN61360:Expression_Goal>Assurance</DINEN61360:Expression_Goal>
+        <DINEN61360:Logic_Interpretation>=</DINEN61360:Logic_Interpretation>
+        <DINEN61360:Value rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</DINEN61360:Value>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3id.org/hsu-aut/caskman#MTP_CurrentState_Stopped -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/hsu-aut/caskman#MTP_CurrentState_Stopped">
+        <rdf:type rdf:resource="http://www.hsu-ifa.de/ontologies/DINEN61360#Instance_Description"/>
+        <DINEN61360:Instance_Description_has_Type rdf:resource="http://www.w3id.org/hsu-aut/cask#CurrentStateOutput_TD"/>
+        <DINEN61360:Expression_Goal>Assurance</DINEN61360:Expression_Goal>
+        <DINEN61360:Logic_Interpretation>=</DINEN61360:Logic_Interpretation>
+        <DINEN61360:Value rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</DINEN61360:Value>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3id.org/hsu-aut/caskman#MTP_CurrentState_Stopping -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/hsu-aut/caskman#MTP_CurrentState_Stopping">
+        <rdf:type rdf:resource="http://www.hsu-ifa.de/ontologies/DINEN61360#Instance_Description"/>
+        <DINEN61360:Instance_Description_has_Type rdf:resource="http://www.w3id.org/hsu-aut/cask#CurrentStateOutput_TD"/>
+        <DINEN61360:Expression_Goal>Assurance</DINEN61360:Expression_Goal>
+        <DINEN61360:Logic_Interpretation>=</DINEN61360:Logic_Interpretation>
+        <DINEN61360:Value rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">128</DINEN61360:Value>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3id.org/hsu-aut/caskman#MTP_CurrentState_Unholding -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/hsu-aut/caskman#MTP_CurrentState_Unholding">
+        <rdf:type rdf:resource="http://www.hsu-ifa.de/ontologies/DINEN61360#Instance_Description"/>
+        <DINEN61360:Instance_Description_has_Type rdf:resource="http://www.w3id.org/hsu-aut/cask#CurrentStateOutput_TD"/>
+        <DINEN61360:Expression_Goal>Assurance</DINEN61360:Expression_Goal>
+        <DINEN61360:Logic_Interpretation>=</DINEN61360:Logic_Interpretation>
+        <DINEN61360:Value rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4096</DINEN61360:Value>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3id.org/hsu-aut/caskman#PLC2Skill_Command_Abort -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/hsu-aut/caskman#PLC2Skill_Command_Abort">
+        <rdf:type rdf:resource="http://www.hsu-ifa.de/ontologies/DINEN61360#Instance_Description"/>
+        <DINEN61360:Instance_Description_has_Type rdf:resource="http://www.w3id.org/hsu-aut/cask#SkillCommandVariable_TD"/>
+        <DINEN61360:Expression_Goal>Requirement</DINEN61360:Expression_Goal>
+        <DINEN61360:Logic_Interpretation>=</DINEN61360:Logic_Interpretation>
+        <DINEN61360:Value rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</DINEN61360:Value>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3id.org/hsu-aut/caskman#PLC2Skill_Command_Clear -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/hsu-aut/caskman#PLC2Skill_Command_Clear">
+        <rdf:type rdf:resource="http://www.hsu-ifa.de/ontologies/DINEN61360#Instance_Description"/>
+        <DINEN61360:Instance_Description_has_Type rdf:resource="http://www.w3id.org/hsu-aut/cask#SkillCommandVariable_TD"/>
+        <DINEN61360:Expression_Goal>Requirement</DINEN61360:Expression_Goal>
+        <DINEN61360:Logic_Interpretation>=</DINEN61360:Logic_Interpretation>
+        <DINEN61360:Value rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</DINEN61360:Value>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3id.org/hsu-aut/caskman#PLC2Skill_Command_Hold -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/hsu-aut/caskman#PLC2Skill_Command_Hold">
+        <rdf:type rdf:resource="http://www.hsu-ifa.de/ontologies/DINEN61360#Instance_Description"/>
+        <DINEN61360:Instance_Description_has_Type rdf:resource="http://www.w3id.org/hsu-aut/cask#SkillCommandVariable_TD"/>
+        <DINEN61360:Expression_Goal>Requirement</DINEN61360:Expression_Goal>
+        <DINEN61360:Logic_Interpretation>=</DINEN61360:Logic_Interpretation>
+        <DINEN61360:Value rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</DINEN61360:Value>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3id.org/hsu-aut/caskman#PLC2Skill_Command_Reset -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/hsu-aut/caskman#PLC2Skill_Command_Reset">
+        <rdf:type rdf:resource="http://www.hsu-ifa.de/ontologies/DINEN61360#Instance_Description"/>
+        <DINEN61360:Instance_Description_has_Type rdf:resource="http://www.w3id.org/hsu-aut/cask#SkillCommandVariable_TD"/>
+        <DINEN61360:Expression_Goal>Requirement</DINEN61360:Expression_Goal>
+        <DINEN61360:Logic_Interpretation>=</DINEN61360:Logic_Interpretation>
+        <DINEN61360:Value rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</DINEN61360:Value>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3id.org/hsu-aut/caskman#PLC2Skill_Command_Start -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/hsu-aut/caskman#PLC2Skill_Command_Start">
+        <rdf:type rdf:resource="http://www.hsu-ifa.de/ontologies/DINEN61360#Instance_Description"/>
+        <DINEN61360:Instance_Description_has_Type rdf:resource="http://www.w3id.org/hsu-aut/cask#SkillCommandVariable_TD"/>
+        <DINEN61360:Expression_Goal>Requirement</DINEN61360:Expression_Goal>
+        <DINEN61360:Logic_Interpretation>=</DINEN61360:Logic_Interpretation>
+        <DINEN61360:Value rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</DINEN61360:Value>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3id.org/hsu-aut/caskman#PLC2Skill_Command_Stop -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/hsu-aut/caskman#PLC2Skill_Command_Stop">
+        <rdf:type rdf:resource="http://www.hsu-ifa.de/ontologies/DINEN61360#Instance_Description"/>
+        <DINEN61360:Instance_Description_has_Type rdf:resource="http://www.w3id.org/hsu-aut/cask#SkillCommandVariable_TD"/>
+        <DINEN61360:Expression_Goal>Requirement</DINEN61360:Expression_Goal>
+        <DINEN61360:Logic_Interpretation>=</DINEN61360:Logic_Interpretation>
+        <DINEN61360:Value rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</DINEN61360:Value>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3id.org/hsu-aut/caskman#PLC2Skill_Command_Suspend -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/hsu-aut/caskman#PLC2Skill_Command_Suspend">
+        <rdf:type rdf:resource="http://www.hsu-ifa.de/ontologies/DINEN61360#Instance_Description"/>
+        <DINEN61360:Instance_Description_has_Type rdf:resource="http://www.w3id.org/hsu-aut/cask#SkillCommandVariable_TD"/>
+        <DINEN61360:Expression_Goal>Requirement</DINEN61360:Expression_Goal>
+        <DINEN61360:Logic_Interpretation>=</DINEN61360:Logic_Interpretation>
+        <DINEN61360:Value rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</DINEN61360:Value>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3id.org/hsu-aut/caskman#PLC2Skill_Command_Unhold -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/hsu-aut/caskman#PLC2Skill_Command_Unhold">
+        <rdf:type rdf:resource="http://www.hsu-ifa.de/ontologies/DINEN61360#Instance_Description"/>
+        <DINEN61360:Instance_Description_has_Type rdf:resource="http://www.w3id.org/hsu-aut/cask#SkillCommandVariable_TD"/>
+        <DINEN61360:Expression_Goal>Requirement</DINEN61360:Expression_Goal>
+        <DINEN61360:Logic_Interpretation>=</DINEN61360:Logic_Interpretation>
+        <DINEN61360:Value rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</DINEN61360:Value>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3id.org/hsu-aut/caskman#PLC2Skill_Command_Unsuspend -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/hsu-aut/caskman#PLC2Skill_Command_Unsuspend">
+        <rdf:type rdf:resource="http://www.hsu-ifa.de/ontologies/DINEN61360#Instance_Description"/>
+        <DINEN61360:Instance_Description_has_Type rdf:resource="http://www.w3id.org/hsu-aut/cask#SkillCommandVariable_TD"/>
+        <DINEN61360:Expression_Goal>Requirement</DINEN61360:Expression_Goal>
+        <DINEN61360:Logic_Interpretation>=</DINEN61360:Logic_Interpretation>
+        <DINEN61360:Value rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</DINEN61360:Value>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3id.org/hsu-aut/caskman#PLC2Skill_CurrentState_Aborted -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/hsu-aut/caskman#PLC2Skill_CurrentState_Aborted">
+        <rdf:type rdf:resource="http://www.hsu-ifa.de/ontologies/DINEN61360#Instance_Description"/>
+        <DINEN61360:Instance_Description_has_Type rdf:resource="http://www.w3id.org/hsu-aut/cask#CurrentStateOutput_TD"/>
+        <DINEN61360:Expression_Goal>Assurance</DINEN61360:Expression_Goal>
+        <DINEN61360:Logic_Interpretation>=</DINEN61360:Logic_Interpretation>
+        <DINEN61360:Value rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">16</DINEN61360:Value>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3id.org/hsu-aut/caskman#PLC2Skill_CurrentState_Aborting -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/hsu-aut/caskman#PLC2Skill_CurrentState_Aborting">
+        <rdf:type rdf:resource="http://www.hsu-ifa.de/ontologies/DINEN61360#Instance_Description"/>
+        <DINEN61360:Instance_Description_has_Type rdf:resource="http://www.w3id.org/hsu-aut/cask#CurrentStateOutput_TD"/>
+        <DINEN61360:Expression_Goal>Assurance</DINEN61360:Expression_Goal>
+        <DINEN61360:Logic_Interpretation>=</DINEN61360:Logic_Interpretation>
+        <DINEN61360:Value rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</DINEN61360:Value>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3id.org/hsu-aut/caskman#PLC2Skill_CurrentState_Clearing -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/hsu-aut/caskman#PLC2Skill_CurrentState_Clearing">
+        <rdf:type rdf:resource="http://www.hsu-ifa.de/ontologies/DINEN61360#Instance_Description"/>
+        <DINEN61360:Instance_Description_has_Type rdf:resource="http://www.w3id.org/hsu-aut/cask#CurrentStateOutput_TD"/>
+        <DINEN61360:Expression_Goal>Assurance</DINEN61360:Expression_Goal>
+        <DINEN61360:Logic_Interpretation>=</DINEN61360:Logic_Interpretation>
+        <DINEN61360:Value rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">17</DINEN61360:Value>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3id.org/hsu-aut/caskman#PLC2Skill_CurrentState_Complete -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/hsu-aut/caskman#PLC2Skill_CurrentState_Complete">
+        <rdf:type rdf:resource="http://www.hsu-ifa.de/ontologies/DINEN61360#Instance_Description"/>
+        <DINEN61360:Instance_Description_has_Type rdf:resource="http://www.w3id.org/hsu-aut/cask#CurrentStateOutput_TD"/>
+        <DINEN61360:Expression_Goal>Assurance</DINEN61360:Expression_Goal>
+        <DINEN61360:Logic_Interpretation>=</DINEN61360:Logic_Interpretation>
+        <DINEN61360:Value rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</DINEN61360:Value>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3id.org/hsu-aut/caskman#PLC2Skill_CurrentState_Completing -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/hsu-aut/caskman#PLC2Skill_CurrentState_Completing">
+        <rdf:type rdf:resource="http://www.hsu-ifa.de/ontologies/DINEN61360#Instance_Description"/>
+        <DINEN61360:Instance_Description_has_Type rdf:resource="http://www.w3id.org/hsu-aut/cask#CurrentStateOutput_TD"/>
+        <DINEN61360:Expression_Goal>Assurance</DINEN61360:Expression_Goal>
+        <DINEN61360:Logic_Interpretation>=</DINEN61360:Logic_Interpretation>
+        <DINEN61360:Value rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</DINEN61360:Value>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3id.org/hsu-aut/caskman#PLC2Skill_CurrentState_Execute -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/hsu-aut/caskman#PLC2Skill_CurrentState_Execute">
+        <rdf:type rdf:resource="http://www.hsu-ifa.de/ontologies/DINEN61360#Instance_Description"/>
+        <DINEN61360:Instance_Description_has_Type rdf:resource="http://www.w3id.org/hsu-aut/cask#CurrentStateOutput_TD"/>
+        <DINEN61360:Expression_Goal>Assurance</DINEN61360:Expression_Goal>
+        <DINEN61360:Logic_Interpretation>=</DINEN61360:Logic_Interpretation>
+        <DINEN61360:Value rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</DINEN61360:Value>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3id.org/hsu-aut/caskman#PLC2Skill_CurrentState_Held -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/hsu-aut/caskman#PLC2Skill_CurrentState_Held">
+        <rdf:type rdf:resource="http://www.hsu-ifa.de/ontologies/DINEN61360#Instance_Description"/>
+        <DINEN61360:Instance_Description_has_Type rdf:resource="http://www.w3id.org/hsu-aut/cask#CurrentStateOutput_TD"/>
+        <DINEN61360:Expression_Goal>Assurance</DINEN61360:Expression_Goal>
+        <DINEN61360:Logic_Interpretation>=</DINEN61360:Logic_Interpretation>
+        <DINEN61360:Value rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</DINEN61360:Value>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3id.org/hsu-aut/caskman#PLC2Skill_CurrentState_Holding -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/hsu-aut/caskman#PLC2Skill_CurrentState_Holding">
+        <rdf:type rdf:resource="http://www.hsu-ifa.de/ontologies/DINEN61360#Instance_Description"/>
+        <DINEN61360:Instance_Description_has_Type rdf:resource="http://www.w3id.org/hsu-aut/cask#CurrentStateOutput_TD"/>
+        <DINEN61360:Expression_Goal>Assurance</DINEN61360:Expression_Goal>
+        <DINEN61360:Logic_Interpretation>=</DINEN61360:Logic_Interpretation>
+        <DINEN61360:Value rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</DINEN61360:Value>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3id.org/hsu-aut/caskman#PLC2Skill_CurrentState_Idle -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/hsu-aut/caskman#PLC2Skill_CurrentState_Idle">
+        <rdf:type rdf:resource="http://www.hsu-ifa.de/ontologies/DINEN61360#Instance_Description"/>
+        <DINEN61360:Instance_Description_has_Type rdf:resource="http://www.w3id.org/hsu-aut/cask#CurrentStateOutput_TD"/>
+        <DINEN61360:Expression_Goal>Assurance</DINEN61360:Expression_Goal>
+        <DINEN61360:Logic_Interpretation>=</DINEN61360:Logic_Interpretation>
+        <DINEN61360:Value rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</DINEN61360:Value>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3id.org/hsu-aut/caskman#PLC2Skill_CurrentState_Resetting -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/hsu-aut/caskman#PLC2Skill_CurrentState_Resetting">
+        <rdf:type rdf:resource="http://www.hsu-ifa.de/ontologies/DINEN61360#Instance_Description"/>
+        <DINEN61360:Instance_Description_has_Type rdf:resource="http://www.w3id.org/hsu-aut/cask#CurrentStateOutput_TD"/>
+        <DINEN61360:Expression_Goal>Assurance</DINEN61360:Expression_Goal>
+        <DINEN61360:Logic_Interpretation>=</DINEN61360:Logic_Interpretation>
+        <DINEN61360:Value rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</DINEN61360:Value>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3id.org/hsu-aut/caskman#PLC2Skill_CurrentState_Starting -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/hsu-aut/caskman#PLC2Skill_CurrentState_Starting">
+        <rdf:type rdf:resource="http://www.hsu-ifa.de/ontologies/DINEN61360#Instance_Description"/>
+        <DINEN61360:Instance_Description_has_Type rdf:resource="http://www.w3id.org/hsu-aut/cask#CurrentStateOutput_TD"/>
+        <DINEN61360:Expression_Goal>Assurance</DINEN61360:Expression_Goal>
+        <DINEN61360:Logic_Interpretation>=</DINEN61360:Logic_Interpretation>
+        <DINEN61360:Value rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</DINEN61360:Value>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3id.org/hsu-aut/caskman#PLC2Skill_CurrentState_Stopped -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/hsu-aut/caskman#PLC2Skill_CurrentState_Stopped">
+        <rdf:type rdf:resource="http://www.hsu-ifa.de/ontologies/DINEN61360#Instance_Description"/>
+        <DINEN61360:Instance_Description_has_Type rdf:resource="http://www.w3id.org/hsu-aut/cask#CurrentStateOutput_TD"/>
+        <DINEN61360:Expression_Goal>Assurance</DINEN61360:Expression_Goal>
+        <DINEN61360:Logic_Interpretation>=</DINEN61360:Logic_Interpretation>
+        <DINEN61360:Value rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</DINEN61360:Value>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3id.org/hsu-aut/caskman#PLC2Skill_CurrentState_Stopping -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/hsu-aut/caskman#PLC2Skill_CurrentState_Stopping">
+        <rdf:type rdf:resource="http://www.hsu-ifa.de/ontologies/DINEN61360#Instance_Description"/>
+        <DINEN61360:Instance_Description_has_Type rdf:resource="http://www.w3id.org/hsu-aut/cask#CurrentStateOutput_TD"/>
+        <DINEN61360:Expression_Goal>Assurance</DINEN61360:Expression_Goal>
+        <DINEN61360:Logic_Interpretation>=</DINEN61360:Logic_Interpretation>
+        <DINEN61360:Value rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</DINEN61360:Value>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3id.org/hsu-aut/caskman#PLC2Skill_CurrentState_Suspended -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/hsu-aut/caskman#PLC2Skill_CurrentState_Suspended">
+        <rdf:type rdf:resource="http://www.hsu-ifa.de/ontologies/DINEN61360#Instance_Description"/>
+        <DINEN61360:Instance_Description_has_Type rdf:resource="http://www.w3id.org/hsu-aut/cask#CurrentStateOutput_TD"/>
+        <DINEN61360:Expression_Goal>Assurance</DINEN61360:Expression_Goal>
+        <DINEN61360:Logic_Interpretation>=</DINEN61360:Logic_Interpretation>
+        <DINEN61360:Value rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</DINEN61360:Value>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3id.org/hsu-aut/caskman#PLC2Skill_CurrentState_Suspending -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/hsu-aut/caskman#PLC2Skill_CurrentState_Suspending">
+        <rdf:type rdf:resource="http://www.hsu-ifa.de/ontologies/DINEN61360#Instance_Description"/>
+        <DINEN61360:Instance_Description_has_Type rdf:resource="http://www.w3id.org/hsu-aut/cask#CurrentStateOutput_TD"/>
+        <DINEN61360:Expression_Goal>Assurance</DINEN61360:Expression_Goal>
+        <DINEN61360:Logic_Interpretation>=</DINEN61360:Logic_Interpretation>
+        <DINEN61360:Value rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</DINEN61360:Value>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3id.org/hsu-aut/caskman#PLC2Skill_CurrentState_Unholding -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/hsu-aut/caskman#PLC2Skill_CurrentState_Unholding">
+        <rdf:type rdf:resource="http://www.hsu-ifa.de/ontologies/DINEN61360#Instance_Description"/>
+        <DINEN61360:Instance_Description_has_Type rdf:resource="http://www.w3id.org/hsu-aut/cask#CurrentStateOutput_TD"/>
+        <DINEN61360:Expression_Goal>Assurance</DINEN61360:Expression_Goal>
+        <DINEN61360:Logic_Interpretation>=</DINEN61360:Logic_Interpretation>
+        <DINEN61360:Value rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</DINEN61360:Value>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3id.org/hsu-aut/caskman#PLC2Skill_CurrentState_Unsuspending -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/hsu-aut/caskman#PLC2Skill_CurrentState_Unsuspending">
+        <rdf:type rdf:resource="http://www.hsu-ifa.de/ontologies/DINEN61360#Instance_Description"/>
+        <DINEN61360:Instance_Description_has_Type rdf:resource="http://www.w3id.org/hsu-aut/cask#CurrentStateOutput_TD"/>
+        <DINEN61360:Expression_Goal>Assurance</DINEN61360:Expression_Goal>
+        <DINEN61360:Logic_Interpretation>=</DINEN61360:Logic_Interpretation>
+        <DINEN61360:Value rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</DINEN61360:Value>
+    </owl:NamedIndividual>
+	
 </rdf:RDF>
 
 
