@@ -1,14 +1,21 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns="http://www.w3id.org/hsu-aut/caskman#"
      xml:base="http://www.w3id.org/hsu-aut/caskman"
+     xmlns:CSS="http://www.w3id.org/hsu-aut/css#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:CaSk="http://www.w3id.org/hsu-aut/cask#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:ISA88="http://www.hsu-ifa.de/ontologies/ISA-TR88#"
      xmlns:OpcUa="http://www.hsu-ifa.de/ontologies/OpcUa#"
-	 xmlns:DINEN61360="http://www.hsu-ifa.de/ontologies/DINEN61360#"
-     xmlns:swrla="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#">
+     xmlns:swrla="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#"
+     xmlns:DIN8580="http://www.hsu-ifa.de/ontologies/DIN8580#"
+     xmlns:VDI2206="http://www.hsu-ifa.de/ontologies/VDI2206#"
+     xmlns:VDI2860="http://www.hsu-ifa.de/ontologies/VDI2860#"
+     xmlns:VDI3682="http://www.hsu-ifa.de/ontologies/VDI3682#"
+     xmlns:DINEN61360="http://www.hsu-ifa.de/ontologies/DINEN61360#">
     <owl:Ontology rdf:about="http://www.w3id.org/hsu-aut/caskman#">
         <owl:versionIRI rdf:resource="http://www.w3id.org/hsu-aut/caskman/4.3.0#"/>
         <owl:imports rdf:resource="https://raw.githubusercontent.com/hsu-aut/IndustrialStandard-ODP-DIN8580/v1.4.2/DIN8580.owl"/>
@@ -227,10 +234,10 @@
     <owl:Class rdf:about="http://www.w3id.org/hsu-aut/caskman#RestSkillInterface">
         <rdfs:subClassOf rdf:resource="http://www.w3id.org/hsu-aut/css#SkillInterface"/>
     </owl:Class>
-	
-	
-		
-	<!-- 
+    
+
+
+    <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Individuals
@@ -862,7 +869,6 @@
         <DINEN61360:Logic_Interpretation>=</DINEN61360:Logic_Interpretation>
         <DINEN61360:Value rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</DINEN61360:Value>
     </owl:NamedIndividual>
-	
 </rdf:RDF>
 
 
