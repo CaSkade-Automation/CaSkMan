@@ -17,12 +17,13 @@
      xmlns:VDI3682="http://www.hsu-ifa.de/ontologies/VDI3682#"
      xmlns:DINEN61360="http://www.hsu-ifa.de/ontologies/DINEN61360#">
     <owl:Ontology rdf:about="http://www.w3id.org/hsu-aut/caskman#">
-        <owl:versionIRI rdf:resource="http://www.w3id.org/hsu-aut/caskman/4.5.0#"/>
+        <owl:versionIRI rdf:resource="http://www.w3id.org/hsu-aut/caskman/4.5.1#"/>
         <owl:imports rdf:resource="https://raw.githubusercontent.com/hsu-aut/IndustrialStandard-ODP-DIN8580/v1.4.2/DIN8580.owl"/>
         <owl:imports rdf:resource="https://raw.githubusercontent.com/hsu-aut/IndustrialStandard-ODP-OPC-UA/v2.0.0/OpcUa.owl"/>
         <owl:imports rdf:resource="https://raw.githubusercontent.com/hsu-aut/IndustrialStandard-ODP-VDI2860/v1.4.3/VDI2860.owl"/>
         <owl:imports rdf:resource="https://raw.githubusercontent.com/hsu-aut/IndustrialStandard-ODP-WADL/v1.4.2/WADL.owl"/>
-        <owl:imports rdf:resource="https://raw.githubusercontent.com/hsu-aut/cask/v2.4.0/cask.owl"/>
+        <owl:imports rdf:resource="https://raw.githubusercontent.com/hsu-aut/cask/v2.5.1/cask.owl"/>
+        <owl:versionInfo>4.5.1</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -172,6 +173,12 @@
     <!-- http://www.hsu-ifa.de/ontologies/VDI3682#Information -->
 
     <rdf:Description rdf:about="http://www.hsu-ifa.de/ontologies/VDI3682#Information"/>
+    
+
+
+    <!-- http://www.hsu-ifa.de/ontologies/VDI3682#ProcessOperator -->
+
+    <owl:Class rdf:about="http://www.hsu-ifa.de/ontologies/VDI3682#ProcessOperator"/>
     
 
 
