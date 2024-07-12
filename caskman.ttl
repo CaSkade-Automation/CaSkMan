@@ -7,10 +7,10 @@
 @prefix CaSk: <http://www.w3id.org/hsu-aut/cask#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix OpcUa: <http://www.w3id.org/hsu-aut/OpcUa#> .
-@prefix DIN8580: <http://www.hsu-ifa.de/ontologies/DIN8580#> .
-@prefix VDI2860: <http://www.hsu-ifa.de/ontologies/VDI2860#> .
-@prefix VDI3682: <http://www.hsu-ifa.de/ontologies/VDI3682#> .
-@prefix DINEN61360: <http://www.hsu-ifa.de/ontologies/DINEN61360#> .
+@prefix DIN8580: <http://www.w3id.org/hsu-aut/DIN8580#> .
+@prefix VDI2860: <http://www.w3id.org/hsu-aut/VDI2860#> .
+@prefix VDI3682: <http://www.w3id.org/hsu-aut/VDI3682#> .
+@prefix DINEN61360: <http://www.w3id.org/hsu-aut/DINEN61360#> .
 @base <http://www.w3id.org/hsu-aut/caskman#> .
 
 <http://www.w3id.org/hsu-aut/caskman#> rdf:type owl:Ontology ;
@@ -21,25 +21,6 @@
                                                     <http://www.w3id.org/hsu-aut/WADL/2.0.0> ,
                                                     <http://www.w3id.org/hsu-aut/cask/2.5.4> ;
                                         owl:versionInfo "4.5.1" .
-
-#################################################################
-#    Annotation properties
-#################################################################
-
-###  http://www.hsu-ifa.de/ontologies/DINEN61360#Expression_Goal
-DINEN61360:Expression_Goal rdf:type owl:AnnotationProperty .
-
-
-###  http://www.hsu-ifa.de/ontologies/DINEN61360#Instance_Description_has_Type
-DINEN61360:Instance_Description_has_Type rdf:type owl:AnnotationProperty .
-
-
-###  http://www.hsu-ifa.de/ontologies/DINEN61360#Logic_Interpretation
-DINEN61360:Logic_Interpretation rdf:type owl:AnnotationProperty .
-
-
-###  http://www.hsu-ifa.de/ontologies/DINEN61360#Value
-DINEN61360:Value rdf:type owl:AnnotationProperty .
 
 
 #################################################################
@@ -81,10 +62,6 @@ DINEN61360:Value rdf:type owl:AnnotationProperty .
 ###  http://www.hsu-ifa.de/ontologies/DIN8580#Fertigungsverfahren
 DIN8580:Fertigungsverfahren rdf:type owl:Class ;
                             rdfs:subClassOf VDI3682:ProcessOperator .
-
-
-###  http://www.hsu-ifa.de/ontologies/DINEN61360#Instance_Description
-DINEN61360:Instance_Description rdf:type owl:Class .
 
 
 ###  http://www.hsu-ifa.de/ontologies/VDI2860#Handhaben
