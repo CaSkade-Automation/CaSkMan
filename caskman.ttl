@@ -1,0 +1,635 @@
+@prefix : <http://www.w3id.org/hsu-aut/caskman#> .
+@prefix CSS: <http://www.w3id.org/hsu-aut/css#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix CaSk: <http://www.w3id.org/hsu-aut/cask#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ISA88: <http://www.hsu-ifa.de/ontologies/ISA-TR88#> .
+@prefix OpcUa: <http://www.w3id.org/hsu-aut/OpcUa#> .
+@prefix swrla: <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#> .
+@prefix DIN8580: <http://www.hsu-ifa.de/ontologies/DIN8580#> .
+@prefix VDI2206: <http://www.hsu-ifa.de/ontologies/VDI2206#> .
+@prefix VDI2860: <http://www.hsu-ifa.de/ontologies/VDI2860#> .
+@prefix VDI3682: <http://www.hsu-ifa.de/ontologies/VDI3682#> .
+@prefix DINEN61360: <http://www.hsu-ifa.de/ontologies/DINEN61360#> .
+@base <http://www.w3id.org/hsu-aut/caskman#> .
+
+<http://www.w3id.org/hsu-aut/caskman#> rdf:type owl:Ontology ;
+                                        owl:versionIRI <http://www.w3id.org/hsu-aut/caskman/4.5.1#> ;
+                                        owl:imports <http://www.w3id.org/hsu-aut/DIN8580/2.0.0> ,
+                                                    <http://www.w3id.org/hsu-aut/OpcUa/2.0.0> ,
+                                                    <http://www.w3id.org/hsu-aut/VDI2860/2.0.0> ,
+                                                    <http://www.w3id.org/hsu-aut/WADL/2.0.0> ,
+                                                    <http://www.w3id.org/hsu-aut/cask/2.5.4> ;
+                                        owl:versionInfo "4.5.1" .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://www.hsu-ifa.de/ontologies/DINEN61360#Expression_Goal
+DINEN61360:Expression_Goal rdf:type owl:AnnotationProperty .
+
+
+###  http://www.hsu-ifa.de/ontologies/DINEN61360#Instance_Description_has_Type
+DINEN61360:Instance_Description_has_Type rdf:type owl:AnnotationProperty .
+
+
+###  http://www.hsu-ifa.de/ontologies/DINEN61360#Logic_Interpretation
+DINEN61360:Logic_Interpretation rdf:type owl:AnnotationProperty .
+
+
+###  http://www.hsu-ifa.de/ontologies/DINEN61360#Value
+DINEN61360:Value rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.w3id.org/hsu-aut/caskman#accessibleThroughOpcUaInterface
+:accessibleThroughOpcUaInterface rdf:type owl:ObjectProperty ;
+                                 rdfs:subPropertyOf CSS:accessibleThrough ;
+                                 rdfs:domain CSS:Skill ;
+                                 rdfs:range :OpcUaSkillInterface .
+
+
+###  http://www.w3id.org/hsu-aut/caskman#accessibleThroughOpcUaMethodInterface
+:accessibleThroughOpcUaMethodInterface rdf:type owl:ObjectProperty ;
+                                       rdfs:subPropertyOf :accessibleThroughOpcUaInterface ;
+                                       rdfs:domain CSS:Skill ;
+                                       rdfs:range :OpcUaMethodSkillInterface .
+
+
+###  http://www.w3id.org/hsu-aut/caskman#accessibleThroughOpcUaVariableInterface
+:accessibleThroughOpcUaVariableInterface rdf:type owl:ObjectProperty ;
+                                         rdfs:subPropertyOf :accessibleThroughOpcUaInterface ;
+                                         rdfs:domain CSS:Skill ;
+                                         rdfs:range :OpcUaVariableSkillInterface .
+
+
+###  http://www.w3id.org/hsu-aut/caskman#accessibleThroughRestInterface
+:accessibleThroughRestInterface rdf:type owl:ObjectProperty ;
+                                rdfs:subPropertyOf CSS:accessibleThrough ;
+                                rdfs:domain CSS:Skill ;
+                                rdfs:range :RestSkillInterface .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.hsu-ifa.de/ontologies/DIN8580#Fertigungsverfahren
+DIN8580:Fertigungsverfahren rdf:type owl:Class ;
+                            rdfs:subClassOf VDI3682:ProcessOperator .
+
+
+###  http://www.hsu-ifa.de/ontologies/DINEN61360#Instance_Description
+DINEN61360:Instance_Description rdf:type owl:Class .
+
+
+###  http://www.hsu-ifa.de/ontologies/ISA-TR88#Command
+ISA88:Command rdf:type owl:Class .
+
+
+###  http://www.hsu-ifa.de/ontologies/ISA-TR88#State
+ISA88:State rdf:type owl:Class .
+
+
+###  http://www.hsu-ifa.de/ontologies/ISA-TR88#StateMachine
+ISA88:StateMachine rdf:type owl:Class .
+
+
+###  http://www.hsu-ifa.de/ontologies/VDI2206#Module
+VDI2206:Module rdf:type owl:Class ;
+               rdfs:subClassOf VDI3682:TechnicalResource .
+
+
+###  http://www.hsu-ifa.de/ontologies/VDI2206#System
+VDI2206:System rdf:type owl:Class ;
+               rdfs:subClassOf VDI3682:TechnicalResource .
+
+
+###  http://www.hsu-ifa.de/ontologies/VDI2860#Handhaben
+VDI2860:Handhaben rdf:type owl:Class ;
+                  rdfs:subClassOf VDI3682:ProcessOperator .
+
+
+###  http://www.hsu-ifa.de/ontologies/VDI3682#ProcessOperator
+VDI3682:ProcessOperator rdf:type owl:Class .
+
+
+###  http://www.hsu-ifa.de/ontologies/VDI3682#TechnicalResource
+VDI3682:TechnicalResource rdf:type owl:Class .
+
+
+###  http://www.w3id.org/hsu-aut/caskman#JavaSkill
+:JavaSkill rdf:type owl:Class ;
+           rdfs:subClassOf CSS:Skill .
+
+
+###  http://www.w3id.org/hsu-aut/caskman#MtpSkill
+:MtpSkill rdf:type owl:Class ;
+          rdfs:subClassOf CSS:Skill .
+
+
+###  http://www.w3id.org/hsu-aut/caskman#OpcUaMethodSkillInterface
+:OpcUaMethodSkillInterface rdf:type owl:Class ;
+                           rdfs:subClassOf :OpcUaSkillInterface .
+
+
+###  http://www.w3id.org/hsu-aut/caskman#OpcUaSkillInterface
+:OpcUaSkillInterface rdf:type owl:Class ;
+                     rdfs:subClassOf CSS:SkillInterface .
+
+
+###  http://www.w3id.org/hsu-aut/caskman#OpcUaVariableSkillInterface
+:OpcUaVariableSkillInterface rdf:type owl:Class ;
+                             rdfs:subClassOf :OpcUaSkillInterface .
+
+
+###  http://www.w3id.org/hsu-aut/caskman#PlcSkill
+:PlcSkill rdf:type owl:Class ;
+          rdfs:subClassOf CSS:Skill .
+
+
+###  http://www.w3id.org/hsu-aut/caskman#RestSkillInterface
+:RestSkillInterface rdf:type owl:Class ;
+                    rdfs:subClassOf CSS:SkillInterface .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.w3id.org/hsu-aut/caskman#MTP_Command_Abort
+:MTP_Command_Abort rdf:type owl:NamedIndividual ,
+                            DINEN61360:Instance_Description ;
+                   DINEN61360:Expression_Goal "Requirement" ;
+                   DINEN61360:Instance_Description_has_Type CaSk:SkillCommandVariable_TD ;
+                   DINEN61360:Logic_Interpretation "=" ;
+                   DINEN61360:Value "256" .
+
+
+###  http://www.w3id.org/hsu-aut/caskman#MTP_Command_Complete
+:MTP_Command_Complete rdf:type owl:NamedIndividual ,
+                               DINEN61360:Instance_Description ;
+                      DINEN61360:Expression_Goal "Requirement" ;
+                      DINEN61360:Instance_Description_has_Type CaSk:SkillCommandVariable_TD ;
+                      DINEN61360:Logic_Interpretation "=" ;
+                      DINEN61360:Value "1024" .
+
+
+###  http://www.w3id.org/hsu-aut/caskman#MTP_Command_Hold
+:MTP_Command_Hold rdf:type owl:NamedIndividual ,
+                           DINEN61360:Instance_Description ;
+                  DINEN61360:Expression_Goal "Requirement" ;
+                  DINEN61360:Instance_Description_has_Type CaSk:SkillCommandVariable_TD ;
+                  DINEN61360:Logic_Interpretation "=" ;
+                  DINEN61360:Value "16" .
+
+
+###  http://www.w3id.org/hsu-aut/caskman#MTP_Command_Pause
+:MTP_Command_Pause rdf:type owl:NamedIndividual ,
+                            DINEN61360:Instance_Description ;
+                   DINEN61360:Expression_Goal "Requirement" ;
+                   DINEN61360:Instance_Description_has_Type CaSk:SkillCommandVariable_TD ;
+                   DINEN61360:Logic_Interpretation "=" ;
+                   DINEN61360:Value "64" .
+
+
+###  http://www.w3id.org/hsu-aut/caskman#MTP_Command_Reset
+:MTP_Command_Reset rdf:type owl:NamedIndividual ,
+                            DINEN61360:Instance_Description ;
+                   DINEN61360:Expression_Goal "Requirement" ;
+                   DINEN61360:Instance_Description_has_Type CaSk:SkillCommandVariable_TD ;
+                   DINEN61360:Logic_Interpretation "=" ;
+                   DINEN61360:Value "2" .
+
+
+###  http://www.w3id.org/hsu-aut/caskman#MTP_Command_Restart
+:MTP_Command_Restart rdf:type owl:NamedIndividual ,
+                              DINEN61360:Instance_Description ;
+                     DINEN61360:Expression_Goal "Requirement" ;
+                     DINEN61360:Instance_Description_has_Type CaSk:SkillCommandVariable_TD ;
+                     DINEN61360:Logic_Interpretation "=" ;
+                     DINEN61360:Value "512" .
+
+
+###  http://www.w3id.org/hsu-aut/caskman#MTP_Command_Resume
+:MTP_Command_Resume rdf:type owl:NamedIndividual ,
+                             DINEN61360:Instance_Description ;
+                    DINEN61360:Expression_Goal "Requirement" ;
+                    DINEN61360:Instance_Description_has_Type CaSk:SkillCommandVariable_TD ;
+                    DINEN61360:Logic_Interpretation "=" ;
+                    DINEN61360:Value "128" .
+
+
+###  http://www.w3id.org/hsu-aut/caskman#MTP_Command_Start
+:MTP_Command_Start rdf:type owl:NamedIndividual ,
+                            DINEN61360:Instance_Description ;
+                   DINEN61360:Expression_Goal "Requirement" ;
+                   DINEN61360:Instance_Description_has_Type CaSk:SkillCommandVariable_TD ;
+                   DINEN61360:Logic_Interpretation "=" ;
+                   DINEN61360:Value "4" .
+
+
+###  http://www.w3id.org/hsu-aut/caskman#MTP_Command_Stop
+:MTP_Command_Stop rdf:type owl:NamedIndividual ,
+                           DINEN61360:Instance_Description ;
+                  DINEN61360:Expression_Goal "Requirement" ;
+                  DINEN61360:Instance_Description_has_Type CaSk:SkillCommandVariable_TD ;
+                  DINEN61360:Logic_Interpretation "=" ;
+                  DINEN61360:Value "8" .
+
+
+###  http://www.w3id.org/hsu-aut/caskman#MTP_Command_Unhold
+:MTP_Command_Unhold rdf:type owl:NamedIndividual ,
+                             DINEN61360:Instance_Description ;
+                    DINEN61360:Expression_Goal "Requirement" ;
+                    DINEN61360:Instance_Description_has_Type CaSk:SkillCommandVariable_TD ;
+                    DINEN61360:Logic_Interpretation "=" ;
+                    DINEN61360:Value 32 .
+
+
+###  http://www.w3id.org/hsu-aut/caskman#MTP_CurrentState_Aborted
+:MTP_CurrentState_Aborted rdf:type owl:NamedIndividual ,
+                                   DINEN61360:Instance_Description ;
+                          DINEN61360:Expression_Goal "Assurance" ;
+                          DINEN61360:Instance_Description_has_Type CaSk:CurrentStateOutput_TD ;
+                          DINEN61360:Logic_Interpretation "=" ;
+                          DINEN61360:Value 512 .
+
+
+###  http://www.w3id.org/hsu-aut/caskman#MTP_CurrentState_Aborting
+:MTP_CurrentState_Aborting rdf:type owl:NamedIndividual ,
+                                    DINEN61360:Instance_Description ;
+                           DINEN61360:Expression_Goal "Assurance" ;
+                           DINEN61360:Instance_Description_has_Type CaSk:CurrentStateOutput_TD ;
+                           DINEN61360:Logic_Interpretation "=" ;
+                           DINEN61360:Value 256 .
+
+
+###  http://www.w3id.org/hsu-aut/caskman#MTP_CurrentState_Completed
+:MTP_CurrentState_Completed rdf:type owl:NamedIndividual ,
+                                     DINEN61360:Instance_Description ;
+                            DINEN61360:Expression_Goal "Assurance" ;
+                            DINEN61360:Instance_Description_has_Type CaSk:CurrentStateOutput_TD ;
+                            DINEN61360:Logic_Interpretation "=" ;
+                            DINEN61360:Value 131072 .
+
+
+###  http://www.w3id.org/hsu-aut/caskman#MTP_CurrentState_Completing
+:MTP_CurrentState_Completing rdf:type owl:NamedIndividual ,
+                                      DINEN61360:Instance_Description ;
+                             DINEN61360:Expression_Goal "Assurance" ;
+                             DINEN61360:Instance_Description_has_Type CaSk:CurrentStateOutput_TD ;
+                             DINEN61360:Logic_Interpretation "=" ;
+                             DINEN61360:Value 65536 .
+
+
+###  http://www.w3id.org/hsu-aut/caskman#MTP_CurrentState_Execute
+:MTP_CurrentState_Execute rdf:type owl:NamedIndividual ,
+                                   DINEN61360:Instance_Description ;
+                          DINEN61360:Expression_Goal "Assurance" ;
+                          DINEN61360:Instance_Description_has_Type CaSk:CurrentStateOutput_TD ;
+                          DINEN61360:Logic_Interpretation "=" ;
+                          DINEN61360:Value 64 .
+
+
+###  http://www.w3id.org/hsu-aut/caskman#MTP_CurrentState_Held
+:MTP_CurrentState_Held rdf:type owl:NamedIndividual ,
+                                DINEN61360:Instance_Description ;
+                       DINEN61360:Expression_Goal "Assurance" ;
+                       DINEN61360:Instance_Description_has_Type CaSk:CurrentStateOutput_TD ;
+                       DINEN61360:Logic_Interpretation "=" ;
+                       DINEN61360:Value 2048 .
+
+
+###  http://www.w3id.org/hsu-aut/caskman#MTP_CurrentState_Holding
+:MTP_CurrentState_Holding rdf:type owl:NamedIndividual ,
+                                   DINEN61360:Instance_Description ;
+                          DINEN61360:Expression_Goal "Assurance" ;
+                          DINEN61360:Instance_Description_has_Type CaSk:CurrentStateOutput_TD ;
+                          DINEN61360:Logic_Interpretation "=" ;
+                          DINEN61360:Value 1024 .
+
+
+###  http://www.w3id.org/hsu-aut/caskman#MTP_CurrentState_Idle
+:MTP_CurrentState_Idle rdf:type owl:NamedIndividual ,
+                                DINEN61360:Instance_Description ;
+                       DINEN61360:Expression_Goal "Assurance" ;
+                       DINEN61360:Instance_Description_has_Type CaSk:CurrentStateOutput_TD ;
+                       DINEN61360:Logic_Interpretation "=" ;
+                       DINEN61360:Value 16 .
+
+
+###  http://www.w3id.org/hsu-aut/caskman#MTP_CurrentState_Paused
+:MTP_CurrentState_Paused rdf:type owl:NamedIndividual ,
+                                  DINEN61360:Instance_Description ;
+                         DINEN61360:Expression_Goal "Assurance" ;
+                         DINEN61360:Instance_Description_has_Type CaSk:CurrentStateOutput_TD ;
+                         DINEN61360:Logic_Interpretation "=" ;
+                         DINEN61360:Value 32 .
+
+
+###  http://www.w3id.org/hsu-aut/caskman#MTP_CurrentState_Pausing
+:MTP_CurrentState_Pausing rdf:type owl:NamedIndividual ,
+                                   DINEN61360:Instance_Description ;
+                          DINEN61360:Expression_Goal "Assurance" ;
+                          DINEN61360:Instance_Description_has_Type CaSk:CurrentStateOutput_TD ;
+                          DINEN61360:Logic_Interpretation "=" ;
+                          DINEN61360:Value 8192 .
+
+
+###  http://www.w3id.org/hsu-aut/caskman#MTP_CurrentState_Resetting
+:MTP_CurrentState_Resetting rdf:type owl:NamedIndividual ,
+                                     DINEN61360:Instance_Description ;
+                            DINEN61360:Expression_Goal "Assurance" ;
+                            DINEN61360:Instance_Description_has_Type CaSk:CurrentStateOutput_TD ;
+                            DINEN61360:Logic_Interpretation "=" ;
+                            DINEN61360:Value 32768 .
+
+
+###  http://www.w3id.org/hsu-aut/caskman#MTP_CurrentState_Resuming
+:MTP_CurrentState_Resuming rdf:type owl:NamedIndividual ,
+                                    DINEN61360:Instance_Description ;
+                           DINEN61360:Expression_Goal "Assurance" ;
+                           DINEN61360:Instance_Description_has_Type CaSk:CurrentStateOutput_TD ;
+                           DINEN61360:Logic_Interpretation "=" ;
+                           DINEN61360:Value 16384 .
+
+
+###  http://www.w3id.org/hsu-aut/caskman#MTP_CurrentState_Starting
+:MTP_CurrentState_Starting rdf:type owl:NamedIndividual ,
+                                    DINEN61360:Instance_Description ;
+                           DINEN61360:Expression_Goal "Assurance" ;
+                           DINEN61360:Instance_Description_has_Type CaSk:CurrentStateOutput_TD ;
+                           DINEN61360:Logic_Interpretation "=" ;
+                           DINEN61360:Value 8 .
+
+
+###  http://www.w3id.org/hsu-aut/caskman#MTP_CurrentState_Stopped
+:MTP_CurrentState_Stopped rdf:type owl:NamedIndividual ,
+                                   DINEN61360:Instance_Description ;
+                          DINEN61360:Expression_Goal "Assurance" ;
+                          DINEN61360:Instance_Description_has_Type CaSk:CurrentStateOutput_TD ;
+                          DINEN61360:Logic_Interpretation "=" ;
+                          DINEN61360:Value 4 .
+
+
+###  http://www.w3id.org/hsu-aut/caskman#MTP_CurrentState_Stopping
+:MTP_CurrentState_Stopping rdf:type owl:NamedIndividual ,
+                                    DINEN61360:Instance_Description ;
+                           DINEN61360:Expression_Goal "Assurance" ;
+                           DINEN61360:Instance_Description_has_Type CaSk:CurrentStateOutput_TD ;
+                           DINEN61360:Logic_Interpretation "=" ;
+                           DINEN61360:Value 128 .
+
+
+###  http://www.w3id.org/hsu-aut/caskman#MTP_CurrentState_Unholding
+:MTP_CurrentState_Unholding rdf:type owl:NamedIndividual ,
+                                     DINEN61360:Instance_Description ;
+                            DINEN61360:Expression_Goal "Assurance" ;
+                            DINEN61360:Instance_Description_has_Type CaSk:CurrentStateOutput_TD ;
+                            DINEN61360:Logic_Interpretation "=" ;
+                            DINEN61360:Value 4096 .
+
+
+###  http://www.w3id.org/hsu-aut/caskman#PLC2Skill_Command_Abort
+:PLC2Skill_Command_Abort rdf:type owl:NamedIndividual ,
+                                  DINEN61360:Instance_Description ;
+                         DINEN61360:Expression_Goal "Requirement" ;
+                         DINEN61360:Instance_Description_has_Type CaSk:SkillCommandVariable_TD ;
+                         DINEN61360:Logic_Interpretation "=" ;
+                         DINEN61360:Value 9 .
+
+
+###  http://www.w3id.org/hsu-aut/caskman#PLC2Skill_Command_Clear
+:PLC2Skill_Command_Clear rdf:type owl:NamedIndividual ,
+                                  DINEN61360:Instance_Description ;
+                         DINEN61360:Expression_Goal "Requirement" ;
+                         DINEN61360:Instance_Description_has_Type CaSk:SkillCommandVariable_TD ;
+                         DINEN61360:Logic_Interpretation "=" ;
+                         DINEN61360:Value 7 .
+
+
+###  http://www.w3id.org/hsu-aut/caskman#PLC2Skill_Command_Hold
+:PLC2Skill_Command_Hold rdf:type owl:NamedIndividual ,
+                                 DINEN61360:Instance_Description ;
+                        DINEN61360:Expression_Goal "Requirement" ;
+                        DINEN61360:Instance_Description_has_Type CaSk:SkillCommandVariable_TD ;
+                        DINEN61360:Logic_Interpretation "=" ;
+                        DINEN61360:Value 3 .
+
+
+###  http://www.w3id.org/hsu-aut/caskman#PLC2Skill_Command_Reset
+:PLC2Skill_Command_Reset rdf:type owl:NamedIndividual ,
+                                  DINEN61360:Instance_Description ;
+                         DINEN61360:Expression_Goal "Requirement" ;
+                         DINEN61360:Instance_Description_has_Type CaSk:SkillCommandVariable_TD ;
+                         DINEN61360:Logic_Interpretation "=" ;
+                         DINEN61360:Value 2 .
+
+
+###  http://www.w3id.org/hsu-aut/caskman#PLC2Skill_Command_Start
+:PLC2Skill_Command_Start rdf:type owl:NamedIndividual ,
+                                  DINEN61360:Instance_Description ;
+                         DINEN61360:Expression_Goal "Requirement" ;
+                         DINEN61360:Instance_Description_has_Type CaSk:SkillCommandVariable_TD ;
+                         DINEN61360:Logic_Interpretation "=" ;
+                         DINEN61360:Value 1 .
+
+
+###  http://www.w3id.org/hsu-aut/caskman#PLC2Skill_Command_Stop
+:PLC2Skill_Command_Stop rdf:type owl:NamedIndividual ,
+                                 DINEN61360:Instance_Description ;
+                        DINEN61360:Expression_Goal "Requirement" ;
+                        DINEN61360:Instance_Description_has_Type CaSk:SkillCommandVariable_TD ;
+                        DINEN61360:Logic_Interpretation "=" ;
+                        DINEN61360:Value 8 .
+
+
+###  http://www.w3id.org/hsu-aut/caskman#PLC2Skill_Command_Suspend
+:PLC2Skill_Command_Suspend rdf:type owl:NamedIndividual ,
+                                    DINEN61360:Instance_Description ;
+                           DINEN61360:Expression_Goal "Requirement" ;
+                           DINEN61360:Instance_Description_has_Type CaSk:SkillCommandVariable_TD ;
+                           DINEN61360:Logic_Interpretation "=" ;
+                           DINEN61360:Value 5 .
+
+
+###  http://www.w3id.org/hsu-aut/caskman#PLC2Skill_Command_Unhold
+:PLC2Skill_Command_Unhold rdf:type owl:NamedIndividual ,
+                                   DINEN61360:Instance_Description ;
+                          DINEN61360:Expression_Goal "Requirement" ;
+                          DINEN61360:Instance_Description_has_Type CaSk:SkillCommandVariable_TD ;
+                          DINEN61360:Logic_Interpretation "=" ;
+                          DINEN61360:Value 4 .
+
+
+###  http://www.w3id.org/hsu-aut/caskman#PLC2Skill_Command_Unsuspend
+:PLC2Skill_Command_Unsuspend rdf:type owl:NamedIndividual ,
+                                      DINEN61360:Instance_Description ;
+                             DINEN61360:Expression_Goal "Requirement" ;
+                             DINEN61360:Instance_Description_has_Type CaSk:SkillCommandVariable_TD ;
+                             DINEN61360:Logic_Interpretation "=" ;
+                             DINEN61360:Value 6 .
+
+
+###  http://www.w3id.org/hsu-aut/caskman#PLC2Skill_CurrentState_Aborted
+:PLC2Skill_CurrentState_Aborted rdf:type owl:NamedIndividual ,
+                                         DINEN61360:Instance_Description ;
+                                DINEN61360:Expression_Goal "Assurance" ;
+                                DINEN61360:Instance_Description_has_Type CaSk:CurrentStateOutput_TD ;
+                                DINEN61360:Logic_Interpretation "=" ;
+                                DINEN61360:Value 16 .
+
+
+###  http://www.w3id.org/hsu-aut/caskman#PLC2Skill_CurrentState_Aborting
+:PLC2Skill_CurrentState_Aborting rdf:type owl:NamedIndividual ,
+                                          DINEN61360:Instance_Description ;
+                                 DINEN61360:Expression_Goal "Assurance" ;
+                                 DINEN61360:Instance_Description_has_Type CaSk:CurrentStateOutput_TD ;
+                                 DINEN61360:Logic_Interpretation "=" ;
+                                 DINEN61360:Value 15 .
+
+
+###  http://www.w3id.org/hsu-aut/caskman#PLC2Skill_CurrentState_Clearing
+:PLC2Skill_CurrentState_Clearing rdf:type owl:NamedIndividual ,
+                                          DINEN61360:Instance_Description ;
+                                 DINEN61360:Expression_Goal "Assurance" ;
+                                 DINEN61360:Instance_Description_has_Type CaSk:CurrentStateOutput_TD ;
+                                 DINEN61360:Logic_Interpretation "=" ;
+                                 DINEN61360:Value 17 .
+
+
+###  http://www.w3id.org/hsu-aut/caskman#PLC2Skill_CurrentState_Complete
+:PLC2Skill_CurrentState_Complete rdf:type owl:NamedIndividual ,
+                                          DINEN61360:Instance_Description ;
+                                 DINEN61360:Expression_Goal "Assurance" ;
+                                 DINEN61360:Instance_Description_has_Type CaSk:CurrentStateOutput_TD ;
+                                 DINEN61360:Logic_Interpretation "=" ;
+                                 DINEN61360:Value 5 .
+
+
+###  http://www.w3id.org/hsu-aut/caskman#PLC2Skill_CurrentState_Completing
+:PLC2Skill_CurrentState_Completing rdf:type owl:NamedIndividual ,
+                                            DINEN61360:Instance_Description ;
+                                   DINEN61360:Expression_Goal "Assurance" ;
+                                   DINEN61360:Instance_Description_has_Type CaSk:CurrentStateOutput_TD ;
+                                   DINEN61360:Logic_Interpretation "=" ;
+                                   DINEN61360:Value 4 .
+
+
+###  http://www.w3id.org/hsu-aut/caskman#PLC2Skill_CurrentState_Execute
+:PLC2Skill_CurrentState_Execute rdf:type owl:NamedIndividual ,
+                                         DINEN61360:Instance_Description ;
+                                DINEN61360:Expression_Goal "Assurance" ;
+                                DINEN61360:Instance_Description_has_Type CaSk:CurrentStateOutput_TD ;
+                                DINEN61360:Logic_Interpretation "=" ;
+                                DINEN61360:Value 3 .
+
+
+###  http://www.w3id.org/hsu-aut/caskman#PLC2Skill_CurrentState_Held
+:PLC2Skill_CurrentState_Held rdf:type owl:NamedIndividual ,
+                                      DINEN61360:Instance_Description ;
+                             DINEN61360:Expression_Goal "Assurance" ;
+                             DINEN61360:Instance_Description_has_Type CaSk:CurrentStateOutput_TD ;
+                             DINEN61360:Logic_Interpretation "=" ;
+                             DINEN61360:Value 8 .
+
+
+###  http://www.w3id.org/hsu-aut/caskman#PLC2Skill_CurrentState_Holding
+:PLC2Skill_CurrentState_Holding rdf:type owl:NamedIndividual ,
+                                         DINEN61360:Instance_Description ;
+                                DINEN61360:Expression_Goal "Assurance" ;
+                                DINEN61360:Instance_Description_has_Type CaSk:CurrentStateOutput_TD ;
+                                DINEN61360:Logic_Interpretation "=" ;
+                                DINEN61360:Value 7 .
+
+
+###  http://www.w3id.org/hsu-aut/caskman#PLC2Skill_CurrentState_Idle
+:PLC2Skill_CurrentState_Idle rdf:type owl:NamedIndividual ,
+                                      DINEN61360:Instance_Description ;
+                             DINEN61360:Expression_Goal "Assurance" ;
+                             DINEN61360:Instance_Description_has_Type CaSk:CurrentStateOutput_TD ;
+                             DINEN61360:Logic_Interpretation "=" ;
+                             DINEN61360:Value 1 .
+
+
+###  http://www.w3id.org/hsu-aut/caskman#PLC2Skill_CurrentState_Resetting
+:PLC2Skill_CurrentState_Resetting rdf:type owl:NamedIndividual ,
+                                           DINEN61360:Instance_Description ;
+                                  DINEN61360:Expression_Goal "Assurance" ;
+                                  DINEN61360:Instance_Description_has_Type CaSk:CurrentStateOutput_TD ;
+                                  DINEN61360:Logic_Interpretation "=" ;
+                                  DINEN61360:Value 6 .
+
+
+###  http://www.w3id.org/hsu-aut/caskman#PLC2Skill_CurrentState_Starting
+:PLC2Skill_CurrentState_Starting rdf:type owl:NamedIndividual ,
+                                          DINEN61360:Instance_Description ;
+                                 DINEN61360:Expression_Goal "Assurance" ;
+                                 DINEN61360:Instance_Description_has_Type CaSk:CurrentStateOutput_TD ;
+                                 DINEN61360:Logic_Interpretation "=" ;
+                                 DINEN61360:Value 2 .
+
+
+###  http://www.w3id.org/hsu-aut/caskman#PLC2Skill_CurrentState_Stopped
+:PLC2Skill_CurrentState_Stopped rdf:type owl:NamedIndividual ,
+                                         DINEN61360:Instance_Description ;
+                                DINEN61360:Expression_Goal "Assurance" ;
+                                DINEN61360:Instance_Description_has_Type CaSk:CurrentStateOutput_TD ;
+                                DINEN61360:Logic_Interpretation "=" ;
+                                DINEN61360:Value 14 .
+
+
+###  http://www.w3id.org/hsu-aut/caskman#PLC2Skill_CurrentState_Stopping
+:PLC2Skill_CurrentState_Stopping rdf:type owl:NamedIndividual ,
+                                          DINEN61360:Instance_Description ;
+                                 DINEN61360:Expression_Goal "Assurance" ;
+                                 DINEN61360:Instance_Description_has_Type CaSk:CurrentStateOutput_TD ;
+                                 DINEN61360:Logic_Interpretation "=" ;
+                                 DINEN61360:Value 13 .
+
+
+###  http://www.w3id.org/hsu-aut/caskman#PLC2Skill_CurrentState_Suspended
+:PLC2Skill_CurrentState_Suspended rdf:type owl:NamedIndividual ,
+                                           DINEN61360:Instance_Description ;
+                                  DINEN61360:Expression_Goal "Assurance" ;
+                                  DINEN61360:Instance_Description_has_Type CaSk:CurrentStateOutput_TD ;
+                                  DINEN61360:Logic_Interpretation "=" ;
+                                  DINEN61360:Value 11 .
+
+
+###  http://www.w3id.org/hsu-aut/caskman#PLC2Skill_CurrentState_Suspending
+:PLC2Skill_CurrentState_Suspending rdf:type owl:NamedIndividual ,
+                                            DINEN61360:Instance_Description ;
+                                   DINEN61360:Expression_Goal "Assurance" ;
+                                   DINEN61360:Instance_Description_has_Type CaSk:CurrentStateOutput_TD ;
+                                   DINEN61360:Logic_Interpretation "=" ;
+                                   DINEN61360:Value 10 .
+
+
+###  http://www.w3id.org/hsu-aut/caskman#PLC2Skill_CurrentState_Unholding
+:PLC2Skill_CurrentState_Unholding rdf:type owl:NamedIndividual ,
+                                           DINEN61360:Instance_Description ;
+                                  DINEN61360:Expression_Goal "Assurance" ;
+                                  DINEN61360:Instance_Description_has_Type CaSk:CurrentStateOutput_TD ;
+                                  DINEN61360:Logic_Interpretation "=" ;
+                                  DINEN61360:Value 9 .
+
+
+###  http://www.w3id.org/hsu-aut/caskman#PLC2Skill_CurrentState_Unsuspending
+:PLC2Skill_CurrentState_Unsuspending rdf:type owl:NamedIndividual ,
+                                              DINEN61360:Instance_Description ;
+                                     DINEN61360:Expression_Goal "Assurance" ;
+                                     DINEN61360:Instance_Description_has_Type CaSk:CurrentStateOutput_TD ;
+                                     DINEN61360:Logic_Interpretation "=" ;
+                                     DINEN61360:Value 12 .
+
+
+###  Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi
