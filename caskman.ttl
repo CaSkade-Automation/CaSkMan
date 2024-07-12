@@ -6,11 +6,8 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix CaSk: <http://www.w3id.org/hsu-aut/cask#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix ISA88: <http://www.hsu-ifa.de/ontologies/ISA-TR88#> .
 @prefix OpcUa: <http://www.w3id.org/hsu-aut/OpcUa#> .
-@prefix swrla: <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#> .
 @prefix DIN8580: <http://www.hsu-ifa.de/ontologies/DIN8580#> .
-@prefix VDI2206: <http://www.hsu-ifa.de/ontologies/VDI2206#> .
 @prefix VDI2860: <http://www.hsu-ifa.de/ontologies/VDI2860#> .
 @prefix VDI3682: <http://www.hsu-ifa.de/ontologies/VDI3682#> .
 @prefix DINEN61360: <http://www.hsu-ifa.de/ontologies/DINEN61360#> .
@@ -88,28 +85,6 @@ DIN8580:Fertigungsverfahren rdf:type owl:Class ;
 
 ###  http://www.hsu-ifa.de/ontologies/DINEN61360#Instance_Description
 DINEN61360:Instance_Description rdf:type owl:Class .
-
-
-###  http://www.hsu-ifa.de/ontologies/ISA-TR88#Command
-ISA88:Command rdf:type owl:Class .
-
-
-###  http://www.hsu-ifa.de/ontologies/ISA-TR88#State
-ISA88:State rdf:type owl:Class .
-
-
-###  http://www.hsu-ifa.de/ontologies/ISA-TR88#StateMachine
-ISA88:StateMachine rdf:type owl:Class .
-
-
-###  http://www.hsu-ifa.de/ontologies/VDI2206#Module
-VDI2206:Module rdf:type owl:Class ;
-               rdfs:subClassOf VDI3682:TechnicalResource .
-
-
-###  http://www.hsu-ifa.de/ontologies/VDI2206#System
-VDI2206:System rdf:type owl:Class ;
-               rdfs:subClassOf VDI3682:TechnicalResource .
 
 
 ###  http://www.hsu-ifa.de/ontologies/VDI2860#Handhaben
