@@ -59,7 +59,7 @@
 #    Classes
 #################################################################
 
-###  http://www.hsu-ifa.de/ontologies/DIN8580#Fertigungsverfahren
+###  http://www.w3id.org/hsu-aut/DIN8580#Fertigungsverfahren
 DIN8580:Fertigungsverfahren rdf:type owl:Class ;
                             rdfs:subClassOf VDI3682:ProcessOperator .
 
