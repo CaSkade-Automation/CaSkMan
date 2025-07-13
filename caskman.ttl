@@ -14,14 +14,14 @@
 @base <http://www.w3id.org/hsu-aut/caskman#> .
 
 <http://www.w3id.org/hsu-aut/caskman#> rdf:type owl:Ontology ;
-                                        owl:versionIRI <http://www.w3id.org/hsu-aut/caskman/5.0.0#> ;
+                                        owl:versionIRI <http://www.w3id.org/hsu-aut/caskman/5.0.1#> ;
                                         owl:imports <http://www.w3id.org/hsu-aut/DIN8580/2.0.0> ,
                                                     <http://www.w3id.org/hsu-aut/OpcUa/2.0.0> ,
                                                     <http://www.w3id.org/hsu-aut/VDI2860/2.0.0> ,
                                                     <http://www.w3id.org/hsu-aut/WADL/2.0.0> ,
-                                                    <http://www.w3id.org/hsu-aut/cask/3.0.0> ;
+                                                    <http://www.w3id.org/hsu-aut/cask/3.0.1> ;
                                         rdfs:comment "CaSkMan is part of a three-level ontology architecture for modelling capabilities and skills in manufacturing. It is based on the CSS and CaSk ontologies and extends the CaSk ontology by including standards such as DIN 8580, VDI 2860, WADL, and OPC UA to represent manufacturing and handling operations as well as skill interfaces based on web services and OPC UA." ;
-                                        owl:versionInfo "5.0.0" .
+                                        owl:versionInfo "5.0.1" .
 
 #################################################################
 #    Object Properties
